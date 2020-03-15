@@ -296,37 +296,37 @@
     <None Include="Assets\Standard Assets\Vehicles\Car\Shaders\ReflectiveDiffuseSpec.shader" />
     <None Include="Assets\Standard Assets\Fonts\OpenSans\License!.txt" />
     <Reference Include="Unity.Timeline.Editor">
-      <HintPath>D:/Marijke/Coderdojo/Unity/2020/francis unity_345/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
+      <HintPath>D:/Marijke/Coderdojo/Unity/2020/CoolestProjects_2020/CoolestProjects2020/francis unity_345/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VSCode.Editor">
-      <HintPath>D:/Marijke/Coderdojo/Unity/2020/francis unity_345/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
+      <HintPath>D:/Marijke/Coderdojo/Unity/2020/CoolestProjects_2020/CoolestProjects2020/francis unity_345/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.ProBuilder.AssetIdRemapUtility">
-      <HintPath>D:/Marijke/Coderdojo/Unity/2020/francis unity_345/Library/ScriptAssemblies/Unity.ProBuilder.AssetIdRemapUtility.dll</HintPath>
+      <HintPath>D:/Marijke/Coderdojo/Unity/2020/CoolestProjects_2020/CoolestProjects2020/francis unity_345/Library/ScriptAssemblies/Unity.ProBuilder.AssetIdRemapUtility.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
-      <HintPath>D:/Marijke/Coderdojo/Unity/2020/francis unity_345/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+      <HintPath>D:/Marijke/Coderdojo/Unity/2020/CoolestProjects_2020/CoolestProjects2020/francis unity_345/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UI">
-      <HintPath>D:/Marijke/Coderdojo/Unity/2020/francis unity_345/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
+      <HintPath>D:/Marijke/Coderdojo/Unity/2020/CoolestProjects_2020/CoolestProjects2020/francis unity_345/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Timeline">
-      <HintPath>D:/Marijke/Coderdojo/Unity/2020/francis unity_345/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
+      <HintPath>D:/Marijke/Coderdojo/Unity/2020/CoolestProjects_2020/CoolestProjects2020/francis unity_345/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
     </Reference>
     <Reference Include="Unity.CollabProxy.Editor">
-      <HintPath>D:/Marijke/Coderdojo/Unity/2020/francis unity_345/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
+      <HintPath>D:/Marijke/Coderdojo/Unity/2020/CoolestProjects_2020/CoolestProjects2020/francis unity_345/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Rider.Editor">
-      <HintPath>D:/Marijke/Coderdojo/Unity/2020/francis unity_345/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
+      <HintPath>D:/Marijke/Coderdojo/Unity/2020/CoolestProjects_2020/CoolestProjects2020/francis unity_345/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.ProBuilder.AddOns.Editor">
-      <HintPath>D:/Marijke/Coderdojo/Unity/2020/francis unity_345/Library/ScriptAssemblies/Unity.ProBuilder.AddOns.Editor.dll</HintPath>
+      <HintPath>D:/Marijke/Coderdojo/Unity/2020/CoolestProjects_2020/CoolestProjects2020/francis unity_345/Library/ScriptAssemblies/Unity.ProBuilder.AddOns.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
-      <HintPath>D:/Marijke/Coderdojo/Unity/2020/francis unity_345/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+      <HintPath>D:/Marijke/Coderdojo/Unity/2020/CoolestProjects_2020/CoolestProjects2020/francis unity_345/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.UI">
-      <HintPath>D:/Marijke/Coderdojo/Unity/2020/francis unity_345/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+      <HintPath>D:/Marijke/Coderdojo/Unity/2020/CoolestProjects_2020/CoolestProjects2020/francis unity_345/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>C:/Program Files/Unity/2019.3.5f1/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>

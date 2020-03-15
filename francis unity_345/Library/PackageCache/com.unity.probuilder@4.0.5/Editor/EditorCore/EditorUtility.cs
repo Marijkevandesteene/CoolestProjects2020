@@ -299,9 +299,9 @@ namespace UnityEditor.ProBuilder
         internal static void SetPivotLocationAndSnap(ProBuilderMesh mesh)
         {
             if (ProGridsInterface.SnapEnabled())
-                mesh.transform.position = UnityEngine.ProBuilder.Snapping.SnapValue(mesh.transform.position, ProGridsInterface.SnapValue());
+                mesh.transform.position = Snapping.SnapValue(mesh.transform.position, ProGridsInterface.SnapValue());
             else if (s_SnapNewShapesToGrid)
-                mesh.transform.position = UnityEngine.ProBuilder.Snapping.SnapValue(mesh.transform.position, new Vector3(
+                mesh.transform.position = Snapping.SnapValue(mesh.transform.position, new Vector3(
                             EditorPrefs.GetFloat("MoveSnapX"),
                             EditorPrefs.GetFloat("MoveSnapY"),
                             EditorPrefs.GetFloat("MoveSnapZ")));

@@ -216,7 +216,7 @@ namespace UnityEditor.ProBuilder
                 pivot = s_GetPivotDelegate();
 
                 // earlier version of progrids return a non-snapped pivot point
-                pivot = UnityEngine.ProBuilder.Snapping.SnapValue(pivot, SnapValue());
+                pivot = Snapping.SnapValue(pivot, SnapValue());
                 return true;
             }
 
@@ -360,7 +360,7 @@ namespace UnityEditor.ProBuilder
                 return point;
 
             if (SnapEnabled())
-                return UnityEngine.ProBuilder.Snapping.SnapValue(point, ProGridsInterface.SnapValue());
+                return Snapping.SnapValue(point, ProGridsInterface.SnapValue());
 
             return point;
         }
@@ -378,7 +378,7 @@ namespace UnityEditor.ProBuilder
             if (ProGridsInterface.SnapEnabled())
             {
                 float snap = ProGridsInterface.SnapValue();
-                return UnityEngine.ProBuilder.Snapping.SnapValue(point, snap);
+                return Snapping.SnapValue(point, snap);
             }
 
             return point;
@@ -398,7 +398,7 @@ namespace UnityEditor.ProBuilder
             if (ProGridsInterface.SnapEnabled())
             {
                 float snap = ProGridsInterface.SnapValue();
-                return UnityEngine.ProBuilder.Snapping.SnapValue(point, mask * snap);
+                return Snapping.SnapValue(point, mask * snap);
             }
 
             return point;
