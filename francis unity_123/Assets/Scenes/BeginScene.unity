@@ -2391,12 +2391,34 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ObjectToAttack: {fileID: 1608905440}
+  target: {fileID: 0}
+  speed: 1
 --- !u!4 &740967927 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: b7e95eb81d7e0894580b48733f6126b3,
     type: 3}
   m_PrefabInstance: {fileID: 1459299603}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &776938893 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4255537084011210875, guid: e4e5fc6d1f5f4eb4a81bde36076d9fd5,
+    type: 3}
+  m_PrefabInstance: {fileID: 117222312}
+  m_PrefabAsset: {fileID: 0}
+--- !u!136 &776938894
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 776938893}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.5
+  m_Height: 2
+  m_Direction: 1
+  m_Center: {x: 0, y: 1, z: 0}
 --- !u!1001 &872720550
 PrefabInstance:
   m_ObjectHideFlags: 0
