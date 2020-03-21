@@ -33,14 +33,15 @@ public class ridderControler : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //Movement();
+        Movement();
         //AttackMe();
-        Turn2Knight();
+        //Turn2Knight();
 
     }
 
     void Movement()
     {
+        transform.LookAt(ObjectToAttack.transform);
         if (Input.GetKey(KeyCode.G))
         {
             if (anim.GetBool("aanvallen") == true)
@@ -94,8 +95,12 @@ public class ridderControler : MonoBehaviour
             }
         }
     }
-
     void Turn2Knight()
+    {
+        transform.LookAt(ObjectToAttack.transform);
+    }
+
+    void Turn2Knight_1()
     {
         
         // Determine which direction to rotate towards
