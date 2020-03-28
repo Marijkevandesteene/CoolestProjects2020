@@ -41,7 +41,14 @@ public class ridderControler : MonoBehaviour
 
     void Movement()
     {
-        transform.LookAt(ObjectToAttack.transform);
+        Vector3 ridderPosition = transform.position;
+        Vector3 myPosition = ObjectToAttack.transform.position;
+        float distance = Vector3.Distance(ridderPosition, myPosition);
+
+        if (distance <= 10)
+        {
+            transform.LookAt(ObjectToAttack.transform);
+        }
         if (Input.GetKey(KeyCode.G))
         {
             if (anim.GetBool("aanvallen") == true)
