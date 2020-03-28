@@ -66,6 +66,7 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -143,6 +144,7 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -185,7 +187,6 @@ Transform:
   - {fileID: 4255537084011049985}
   - {fileID: 4255537084011050059}
   - {fileID: 4255537084011050073}
-  - {fileID: 4255537084011050373}
   m_Father: {fileID: 4255537084011050387}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -246,6 +247,7 @@ SkinnedMeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -268,8 +270,8 @@ SkinnedMeshRenderer:
   m_BlendShapeWeights: []
   m_RootBone: {fileID: 4255537084011049997}
   m_AABB:
-    m_Center: {x: 0.006060317, y: 0.7122754, z: -0.015702903}
-    m_Extent: {x: 0.47512603, y: 0.5536933, z: 0.3037457}
+    m_Center: {x: 0.006060362, y: 0.7122752, z: -0.015702933}
+    m_Extent: {x: 0.32106954, y: 0.39627808, z: 0.2263306}
   m_DirtyAABB: 0
 --- !u!183 &4255537084011210792
 Cloth:
@@ -1035,6 +1037,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4255537084011050391}
+  - {fileID: 4255537084011050373}
   m_Father: {fileID: 4255537084011050073}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1062,7 +1065,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4255537084011210797}
   m_LocalRotation: {x: 8.6516944e-17, y: 0.73659825, z: -0.6763306, w: 3.690327e-18}
-  m_LocalPosition: {x: -2.8871298e-37, y: 0.99329245, z: -0.0014990835}
+  m_LocalPosition: {x: 0.605, y: -0.1405201, z: -0.036}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4255537084011050031}
@@ -1457,15 +1460,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4255537084011210825}
-  m_LocalRotation: {x: -0.0000000058766148, y: 0.000000008448381, z: -0.23222181,
-    w: 0.97266287}
+  m_LocalRotation: {x: -0.22717196, y: -0.07989458, z: -0.25196236, w: 0.9372965}
   m_LocalPosition: {x: -1.4210854e-16, y: 0, z: -0.24716347}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4255537084011050069}
   m_Father: {fileID: 4255537084011050023}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -27.782001, y: -2.286, z: -29.527002}
 --- !u!1 &4255537084011210827
 GameObject:
   m_ObjectHideFlags: 0
@@ -1969,14 +1971,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4255537084011210859}
-  m_LocalRotation: {x: 0.53566873, y: 0.45450476, z: -0.51723754, w: -0.48882493}
+  m_LocalRotation: {x: 0.68714195, y: 0.6242862, z: -0.29047558, w: -0.23178996}
   m_LocalPosition: {x: 0.10293535, y: 0.053458426, z: -0.12692842}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4255537084011050023}
   m_Father: {fileID: 4255537084011049989}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 2.5300002, y: -136.427, z: 96.49901}
 --- !u!1 &4255537084011210861
 GameObject:
   m_ObjectHideFlags: 0
@@ -2191,6 +2193,7 @@ SkinnedMeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -2359,7 +2362,10 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
   m_LinearVelocityBlending: 0
-  m_WarningMessage: 
+  m_WarningMessage: "\nBinding warning: Some generic clip(s) animate transforms that
+    are already bound by a Humanoid avatar. These transforms can only be changed by
+    Humanoid clips.\n\tTransform 'spine'\n\tTransform 'hips'\n\tTransform 'hips'\n\tTransform
+    'hips'\n\tFrom animation clip 'Attack'"
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
@@ -2448,14 +2454,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4255537084011211139}
-  m_LocalRotation: {x: -0.000000002337982, y: -0.000000009630956, z: -0.1348371, w: 0.9908678}
+  m_LocalRotation: {x: -0.2688353, y: -0.31442547, z: 0.02267714, w: 0.9101373}
   m_LocalPosition: {x: 2.4868996e-16, y: 2.842171e-16, z: -0.24716347}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4255537084011050383}
   m_Father: {fileID: 4255537084011050081}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -28.365002, y: -41.628002, z: 13.830001}
 --- !u!1 &4255537084011211141
 GameObject:
   m_ObjectHideFlags: 0
@@ -2959,14 +2965,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4255537084011211173}
-  m_LocalRotation: {x: -0.56108075, y: 0.44056094, z: -0.48246768, w: 0.5082513}
-  m_LocalPosition: {x: -0.10293535, y: 0.053458426, z: -0.12692842}
+  m_LocalRotation: {x: -0.6538002, y: 0.67803824, z: -0.2902067, w: 0.16908461}
+  m_LocalPosition: {x: -0.10343076, y: 0.11144249, z: 0.18284492}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4255537084011050081}
-  m_Father: {fileID: 4255537084011049989}
-  m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Father: {fileID: 4255537084011049993}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 9.93, y: 141.828, z: -91.358}
 --- !u!1 &4255537084011211175
 GameObject:
   m_ObjectHideFlags: 0
@@ -3190,6 +3196,7 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -3299,6 +3306,7 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
