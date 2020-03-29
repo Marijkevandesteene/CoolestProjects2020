@@ -37,9 +37,13 @@ public class Boss_Controller : MonoBehaviour
             transform.LookAt(ObjectToAttack.transform);
 
         }
-        if (distance <= 2)
+        if (distance <= 3)
         {
             anim.SetBool("Boss_Attack", true);
+        }
+        else if (distance > 3)
+        {
+            anim.SetBool("Boss_Attack", false);
         }
     }
 }

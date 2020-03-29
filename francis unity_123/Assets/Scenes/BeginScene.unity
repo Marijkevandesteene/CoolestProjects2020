@@ -200,13 +200,18 @@ PrefabInstance:
     - target: {fileID: 6028669458108848668, guid: b3b272dd6ea8b28479d95f80dbd92f47,
         type: 3}
       propertyPath: m_Center.y
-      value: -0.2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6028669458108848668, guid: b3b272dd6ea8b28479d95f80dbd92f47,
         type: 3}
       propertyPath: m_Center.x
-      value: 0.65
+      value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6028669458108848669, guid: b3b272dd6ea8b28479d95f80dbd92f47,
+        type: 3}
+      propertyPath: ObjectToAttack
+      value: 
+      objectReference: {fileID: 356925887}
     - target: {fileID: 7540317153598935003, guid: b3b272dd6ea8b28479d95f80dbd92f47,
         type: 3}
       propertyPath: m_WarningMessage
@@ -223,7 +228,7 @@ PrefabInstance:
     - target: {fileID: 7540317153608228961, guid: b3b272dd6ea8b28479d95f80dbd92f47,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 12.719
+      value: 12.699
       objectReference: {fileID: 0}
     - target: {fileID: 7540317153608228961, guid: b3b272dd6ea8b28479d95f80dbd92f47,
         type: 3}
