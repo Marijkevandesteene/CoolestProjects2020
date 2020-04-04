@@ -1,5 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Collections.Specialized;
+using System.Security.Cryptography;
 using UnityEngine;
 
 public class Boss_Controller : MonoBehaviour
@@ -28,14 +30,19 @@ public class Boss_Controller : MonoBehaviour
 
     void Attack()
     {
-        Vector3 ridderPosition = transform.position;
-        Vector3 myPosition = ObjectToAttack.transform.position;
-        float distance = Vector3.Distance(ridderPosition, myPosition);
+        Vector3 myPosition = transform.position;
+        Vector3 playerPosition = ObjectToAttack.transform.position;
+        Vector3 targetPosition = new Vector3(ObjectToAttack.transform.position.x,
+                                                this.transform.position.y,
+                                                ObjectToAttack.transform.position.z);
+    
+        float distance = Vector3.Distance(playerPosition, myPosition);
 
-        if (distance <= 10)
+        if (distance <= 10 && distance > 1)
         {
             transform.LookAt(ObjectToAttack.transform);
-
+            //new Vector3(ObjectToAttack.transform.position.x, transform.position.y, ObjectToAttack.transform.position.z)
+            // te checken met Reinhart??? - transform.lookAt(targetPosition);
         }
         if (distance <= 3)
         {
