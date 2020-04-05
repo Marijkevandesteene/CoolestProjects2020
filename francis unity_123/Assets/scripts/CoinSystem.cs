@@ -8,20 +8,17 @@ using Random = UnityEngine.Random;
 public class CoinSystem : MonoBehaviour
 {
     private int count;
-    private int coinsInChest;
+    private int ChestContent;
     public Text countText;
     public Text chestText;
-
 
     // Start is called before the first frame update
     void Start()
     {
-        count = PlayerPrefs.GetInt("collectedCoins");
-        coinsInChest = PlayerPrefs.GetInt("coinsInChest");
+        count = PlayerPrefs.GetInt("Collected");
+        ChestContent = PlayerPrefs.GetInt("ChestContent");
         SetCountText();
-        PlayerPrefs.SetInt("collectedCoins", 0);
-        //PlayerPrefs.SetInt("coinsInChest", 0);
-        //SetChestText();
+        //PlayerPrefs.SetInt("Collected", 0);
     }
 
     // Update is called once per frame
@@ -37,16 +34,13 @@ public class CoinSystem : MonoBehaviour
             other.gameObject.SetActive(false);
             count = count + 1;
             SetCountText();
-            PlayerPrefs.SetInt("collectedCoins", count);
-            //PlayerController.collectedCoins = count;
-
-        }
+            PlayerPrefs.SetInt("Collected", count);
+         }
         else if (other.gameObject.CompareTag("chest"))
         {
-            coinsInChest = coinsInChest + count;
-            //PlayerPrefs.GetInt("coinsInChest") + PlayerPrefs.GetInt("collectedCoins");
-            PlayerPrefs.SetInt("coinsInChest", coinsInChest);
-            PlayerPrefs.SetInt("collectedCoins", 0);
+            ChestContent = ChestContent + count;
+            PlayerPrefs.SetInt("ChestContent", ChestContent);
+            PlayerPrefs.SetInt("Collected", 0);
             count = 0;
             SetChestText();
             SetCountText();
@@ -56,10 +50,8 @@ public class CoinSystem : MonoBehaviour
             other.gameObject.SetActive(false);
             count = count + 100;
             SetCountText();
-            PlayerPrefs.SetInt("collectedCoins", count);
-            //PlayerController.collectedCoins = count;
-
-        }
+            PlayerPrefs.SetInt("Collected", count);
+         }
     }
 
 
@@ -70,6 +62,6 @@ public class CoinSystem : MonoBehaviour
 
     void SetChestText()
     {
-        chestText.text = "coins In chest: " + coinsInChest.ToString();
+        chestText.text = "coins In chest: " + ChestContent.ToString();
     }
 }

@@ -8,8 +8,8 @@ public class initialize : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        //PlayerPrefs.DeleteKey("coinsInChest");
-        PlayerPrefs.SetInt("coinsInChest", 0);
+        //PlayerPrefs.DeleteKey("ChestContent");
+        PlayerPrefs.SetInt("ChestContent", 0);
         //SceneManager.LoadScene("PaddenstoelenKamer");
     }
 
