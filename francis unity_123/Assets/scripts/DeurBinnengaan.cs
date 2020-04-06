@@ -2,18 +2,18 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-//using GameSave;
 
 public class DeurBinnengaan : MonoBehaviour
 {
 
     public string LoadScene;
-    public GameObject GameSaveObject;
+ //   public GameObject GameSaveObject;
+    public GameSave gs;
 
     // Start is called before the first frame update
     void Start()
     {
-        GameSaveObject = GameObject.Find("GameSave");
+        gs = new GameSave();
     }
 
     // Update is called once per frame
@@ -26,11 +26,12 @@ public class DeurBinnengaan : MonoBehaviour
     {
         if (other.tag == "Player")
         {
-            GameSaveObject.GetComponent<GameSave>().save();
+            gs.save();
             SceneManager.LoadScene(LoadScene);
         }
         if (other.tag == "Start")
         {
+            gs.save();
             SceneManager.LoadScene("SampleScene");
         }
     }

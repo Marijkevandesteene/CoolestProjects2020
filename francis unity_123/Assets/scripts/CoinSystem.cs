@@ -17,7 +17,6 @@ public class CoinSystem : MonoBehaviour
     {
         count = PlayerPrefs.GetInt("Collected");
         ChestContent = PlayerPrefs.GetInt("ChestContent");
-        //       ChestContent = PlayerStatistics.chestcontent;
         SetCountText();
     }
 

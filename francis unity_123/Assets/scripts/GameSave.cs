@@ -15,8 +15,8 @@ public class GameSave : MonoBehaviour
     public Text chestText;
     public Text collectedText;
 
-    public CoinSystem CoinSys;
-
+    public CoinSystem cs;
+ 
     /// <summary>Static reference to the instance of our DataManager</summary>
     public static GameSave instance;
 
@@ -46,7 +46,7 @@ public class GameSave : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        //CoinSys = GameObject.Find("FPSController").GetComponent<CoinSystem>();
+        cs = new CoinSystem();
         loadGame();
     }
 
@@ -65,10 +65,11 @@ public class GameSave : MonoBehaviour
     }
     public void save()
     {
-        CoinSys = GameObject.Find("FPSController").GetComponent<CoinSystem>();
+
+        // cs = GameObject.Find("FPSController").GetComponent<CoinSystem>();
         PlayerPrefs.SetInt("Health", health);
         PlayerPrefs.SetInt("ChestContent", chestContent);
-        PlayerPrefs.SetInt("Collected", CoinSys.getCollected());
+        PlayerPrefs.SetInt("Collected", cs.getCollected());
         PlayerPrefs.SetInt("Lives", lives);
         PlayerPrefs.Save();
 
