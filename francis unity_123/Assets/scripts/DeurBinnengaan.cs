@@ -24,7 +24,6 @@ public class DeurBinnengaan : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log("we raken iets" + other.tag);
         if (other.tag == "Player")
         {
             GameSaveObject.GetComponent<GameSave>().save();

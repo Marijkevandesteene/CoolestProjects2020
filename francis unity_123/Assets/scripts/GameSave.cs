@@ -15,9 +15,38 @@ public class GameSave : MonoBehaviour
     public Text chestText;
     public Text collectedText;
 
+    public CoinSystem CoinSys;
+
+    /// <summary>Static reference to the instance of our DataManager</summary>
+    public static GameSave instance;
+
+    /// <summary>Awake is called when the script instance is being loaded.</summary>
+    void Awake()
+    {
+        //Debug.Log("Before Awaking Game");
+        //logPlayerPrefs();
+        // If the instance reference has not been set, yet, 
+        if (instance == null)
+        {
+            // Set this instance as the instance reference.
+            instance = this;
+         }
+        else if (instance != this)
+        {
+            // If the instance reference has already been set, and this is not the
+            // the instance reference, destroy this game object.
+            Destroy(gameObject);
+        }
+        
+        // Do not destroy this object, when we load a new scene.
+        DontDestroyOnLoad(gameObject);
+        //Debug.Log("End Awaking Game");
+        //logPlayerPrefs();
+    }
     // Start is called before the first frame update
     void Start()
     {
+        //CoinSys = GameObject.Find("FPSController").GetComponent<CoinSystem>();
         loadGame();
     }
 
@@ -27,15 +56,24 @@ public class GameSave : MonoBehaviour
 
     }
 
+    public void logPlayerPrefs()
+    {
+        //Debug.Log("Health: " + this.health + " - " + PlayerPrefs.GetInt("Health"));
+        //Debug.Log("ChestContent: " + this.chestContent + " - " + PlayerPrefs.GetInt("ChestContent"));
+        //Debug.Log("Lives: " + this.lives + " - " + PlayerPrefs.GetInt("Lives"));
+        Debug.Log("Collected: " + this.collected + " - " + PlayerPrefs.GetInt("Collected"));
+    }
     public void save()
     {
+        CoinSys = GameObject.Find("FPSController").GetComponent<CoinSystem>();
         PlayerPrefs.SetInt("Health", health);
         PlayerPrefs.SetInt("ChestContent", chestContent);
-        PlayerPrefs.SetInt("Collected", collected);
+        PlayerPrefs.SetInt("Collected", CoinSys.getCollected());
         PlayerPrefs.SetInt("Lives", lives);
-
         PlayerPrefs.Save();
-        Debug.Log("Saving Game");
+
+        //Debug.Log("Saving Game");
+        //logPlayerPrefs();
     }
 
     public void loadGame()
@@ -43,8 +81,9 @@ public class GameSave : MonoBehaviour
         setHealth(PlayerPrefs.GetInt("Health"));
         setChestContent(PlayerPrefs.GetInt("ChestContent"));
         setCollected(PlayerPrefs.GetInt("Collected"));
-        setCollected(PlayerPrefs.GetInt("Lives"));
+        setLives(PlayerPrefs.GetInt("Lives"));
         Debug.Log("loading Game");
+        logPlayerPrefs();
     }
 
     public void setHealth(int waarde)
@@ -65,17 +104,17 @@ public class GameSave : MonoBehaviour
         this.chestContent = waarde;
         this.chestText.text = "" + this.chestContent;
     }
+
     public void setCollected(int waarde)
     {
         this.collected = waarde;
         this.collectedText.text = "" + this.collected;
-        //this.healthText.text = "" + this.health;
     }
 
     public void increase5()
     {
         setHealth(health + 5);
-        Debug.Log("loggging increase5");
+        Debug.Log("logging increase5");
 
     }
 }

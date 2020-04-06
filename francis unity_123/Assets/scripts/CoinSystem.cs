@@ -17,14 +17,19 @@ public class CoinSystem : MonoBehaviour
     {
         count = PlayerPrefs.GetInt("Collected");
         ChestContent = PlayerPrefs.GetInt("ChestContent");
+        //       ChestContent = PlayerStatistics.chestcontent;
         SetCountText();
-        //PlayerPrefs.SetInt("Collected", 0);
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
+    }
+
+    public int getCollected()
+    {
+        return this.count;    
     }
 
     void OnTriggerEnter(Collider other)
@@ -40,7 +45,7 @@ public class CoinSystem : MonoBehaviour
         {
             ChestContent = ChestContent + count;
             PlayerPrefs.SetInt("ChestContent", ChestContent);
-            PlayerPrefs.SetInt("Collected", 0);
+            PlayerPrefs.SetInt("collected", 0);
             count = 0;
             SetChestText();
             SetCountText();

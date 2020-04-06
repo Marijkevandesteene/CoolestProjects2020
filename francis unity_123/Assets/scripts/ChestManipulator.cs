@@ -25,7 +25,7 @@ public class ChestManipulator : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log("de kist wordt geraakt" + other.tag);
+        //Debug.Log("de kist wordt geraakt" + other.tag);
         if (other.tag == "Player")
         {
             if (chestOpen == true)
@@ -39,11 +39,6 @@ public class ChestManipulator : MonoBehaviour
                 chestOpen = true;
             }
                 
-            //countInChest = countInChest + other.GetComponent<>
-            //coroutine = WaitAndPrint(2.0f);
-            //StartCoroutine(coroutine);
-            //ObjectToClose.transform.Rotate(0.0f, 0.0f, 0.0f, Space.Self);
-            //;
         }
     }
     private IEnumerator WaitAndPrint(float waitTime)
