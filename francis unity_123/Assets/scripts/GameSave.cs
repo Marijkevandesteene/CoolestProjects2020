@@ -15,11 +15,11 @@ public class GameSave : MonoBehaviour
     public Text chestText;
     public Text collectedText;
 
-    public CoinSystem cs;
- 
     /// <summary>Static reference to the instance of our DataManager</summary>
     public static GameSave instance;
 
+    public CoinSystem cs;
+ 
     /// <summary>Awake is called when the script instance is being loaded.</summary>
     void Awake()
     {
@@ -40,9 +40,8 @@ public class GameSave : MonoBehaviour
         
         // Do not destroy this object, when we load a new scene.
         DontDestroyOnLoad(gameObject);
-        //Debug.Log("End Awaking Game");
-        //logPlayerPrefs();
-    }
+   }
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -58,23 +57,17 @@ public class GameSave : MonoBehaviour
 
     public void logPlayerPrefs()
     {
-        //Debug.Log("Health: " + this.health + " - " + PlayerPrefs.GetInt("Health"));
-        //Debug.Log("ChestContent: " + this.chestContent + " - " + PlayerPrefs.GetInt("ChestContent"));
-        //Debug.Log("Lives: " + this.lives + " - " + PlayerPrefs.GetInt("Lives"));
-        Debug.Log("Collected: " + this.collected + " - " + PlayerPrefs.GetInt("Collected"));
+       Debug.Log("Collected: " + this.collected + " - " + PlayerPrefs.GetInt("Collected"));
     }
+
     public void save()
     {
-
-        // cs = GameObject.Find("FPSController").GetComponent<CoinSystem>();
         PlayerPrefs.SetInt("Health", health);
         PlayerPrefs.SetInt("ChestContent", chestContent);
-        PlayerPrefs.SetInt("Collected", cs.getCollected());
+        if(cs.getCollected() != null)
+            PlayerPrefs.SetInt("Collected", cs.getCollected());
         PlayerPrefs.SetInt("Lives", lives);
         PlayerPrefs.Save();
-
-        //Debug.Log("Saving Game");
-        //logPlayerPrefs();
     }
 
     public void loadGame()
