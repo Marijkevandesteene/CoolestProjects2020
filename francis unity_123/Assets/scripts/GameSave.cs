@@ -58,16 +58,18 @@ public class GameSave : MonoBehaviour
     public void logPlayerPrefs()
     {
        Debug.Log("Collected: " + this.collected + " - " + PlayerPrefs.GetInt("Collected"));
+        Debug.Log("chestContent: " + this.chestContent + " - " + PlayerPrefs.GetInt("ChestContent"));
     }
 
     public void save()
     {
+        Debug.Log("Save: ");
         PlayerPrefs.SetInt("Health", health);
         PlayerPrefs.SetInt("ChestContent", chestContent);
-        if(cs.getCollected() != null)
-            PlayerPrefs.SetInt("Collected", cs.getCollected());
+  //      PlayerPrefs.SetInt("Collected", collected);
         PlayerPrefs.SetInt("Lives", lives);
         PlayerPrefs.Save();
+        logPlayerPrefs();
     }
 
     public void loadGame()
@@ -76,8 +78,8 @@ public class GameSave : MonoBehaviour
         setChestContent(PlayerPrefs.GetInt("ChestContent"));
         setCollected(PlayerPrefs.GetInt("Collected"));
         setLives(PlayerPrefs.GetInt("Lives"));
-        Debug.Log("loading Game");
-        logPlayerPrefs();
+    //    Debug.Log("loading Game");
+    //    logPlayerPrefs();
     }
 
     public void setHealth(int waarde)

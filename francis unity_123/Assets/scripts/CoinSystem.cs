@@ -12,11 +12,14 @@ public class CoinSystem : MonoBehaviour
     public Text countText;
     public Text chestText;
 
+    public GameSave gs;
+    
     // Start is called before the first frame update
     void Start()
     {
         count = PlayerPrefs.GetInt("Collected");
         ChestContent = PlayerPrefs.GetInt("ChestContent");
+        gs = new GameSave();
         SetCountText();
     }
 
@@ -39,6 +42,7 @@ public class CoinSystem : MonoBehaviour
             count = count + 1;
             SetCountText();
             PlayerPrefs.SetInt("Collected", count);
+ //           gs.setCollected(count);
          }
         else if (other.gameObject.CompareTag("chest"))
         {
@@ -48,6 +52,9 @@ public class CoinSystem : MonoBehaviour
             count = 0;
             SetChestText();
             SetCountText();
+
+ //           gs.setChestContent(ChestContent);
+ //           gs.setCollected(count);
         }
         else if (other.gameObject.CompareTag("smaragd"))
         {
@@ -55,7 +62,9 @@ public class CoinSystem : MonoBehaviour
             count = count + 100;
             SetCountText();
             PlayerPrefs.SetInt("Collected", count);
-         }
+ //           gs.setCollected(count);
+        }
+        PlayerPrefs.Save();
     }
 
 
