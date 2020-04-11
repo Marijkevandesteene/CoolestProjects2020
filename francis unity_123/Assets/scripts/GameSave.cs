@@ -18,8 +18,6 @@ public class GameSave : MonoBehaviour
     /// <summary>Static reference to the instance of our DataManager</summary>
     public static GameSave instance;
 
-    public CoinSystem cs;
- 
     /// <summary>Awake is called when the script instance is being loaded.</summary>
     void Awake()
     {
@@ -45,7 +43,6 @@ public class GameSave : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        cs = new CoinSystem();
         loadGame();
     }
 
@@ -66,7 +63,7 @@ public class GameSave : MonoBehaviour
         Debug.Log("Save: ");
         PlayerPrefs.SetInt("Health", health);
         PlayerPrefs.SetInt("ChestContent", chestContent);
-  //      PlayerPrefs.SetInt("Collected", collected);
+        PlayerPrefs.SetInt("Collected", collected);
         PlayerPrefs.SetInt("Lives", lives);
         PlayerPrefs.Save();
         logPlayerPrefs();
@@ -78,8 +75,8 @@ public class GameSave : MonoBehaviour
         setChestContent(PlayerPrefs.GetInt("ChestContent"));
         setCollected(PlayerPrefs.GetInt("Collected"));
         setLives(PlayerPrefs.GetInt("Lives"));
-    //    Debug.Log("loading Game");
-    //    logPlayerPrefs();
+        Debug.Log("loading Game");
+        logPlayerPrefs();
     }
 
     public void setHealth(int waarde)
