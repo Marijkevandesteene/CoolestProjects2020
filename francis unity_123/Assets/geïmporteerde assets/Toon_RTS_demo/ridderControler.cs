@@ -41,12 +41,13 @@ public class ridderControler : MonoBehaviour
 
     void Movement()
     {
-        Vector3 ridderPosition = transform.position;
-        Vector3 myPosition = ObjectToAttack.transform.position;
-        float distance = Vector3.Distance(ridderPosition, myPosition);
+        Vector3 myPosition = transform.position;
+        Vector3 FPSposition = ObjectToAttack.transform.position;
+        float distance = Vector3.Distance(myPosition, FPSposition);
 
-        if (distance <= 10)
-        {
+        //if (distance <= 10)
+        if (distance >= 1 && distance <= 10)
+            {
             transform.LookAt(ObjectToAttack.transform);
         }
         if (Input.GetKey(KeyCode.G))
@@ -102,34 +103,7 @@ public class ridderControler : MonoBehaviour
             }
         }
     }
-    void Turn2Knight()
-    {
-        transform.LookAt(ObjectToAttack.transform);
-    }
-
-    void Turn2Knight_1()
-    {
-        
-        // Determine which direction to rotate towards
-        Vector3 targetDirection = target.position - transform.position;
-
-        // The step size is equal to speed times frame time.
-        float singleStep = speed * Time.deltaTime;
-
-        // Rotate the forward vector towards the target direction by one step
-        Vector3 newDirection = Vector3.RotateTowards(transform.forward, targetDirection, singleStep, 0.0f);
-
-        // Draw a ray pointing at our target in
-        Debug.DrawRay(transform.position, newDirection, Color.red);
-
-        // Calculate a rotation a step closer to the target and applies rotation to this object
-        transform.rotation = Quaternion.LookRotation(newDirection);
-        
-
-    }
-
-
-
+ 
     void GetInput()
     {
         if (Input.GetMouseButtonDown(0))

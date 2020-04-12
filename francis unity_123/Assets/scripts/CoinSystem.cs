@@ -91,8 +91,8 @@ public class CoinSystem : MonoBehaviour
         PlayerPrefs.SetInt("ChestContent", this.chestContent);
         PlayerPrefs.SetInt("Collected", this.collected);
         PlayerPrefs.Save();
-        Debug.Log("Save: ");
-        logPlayerPrefs();
+        //Debug.Log("Save: ");
+        //logPlayerPrefs();
     }
 
     public void loadGame()

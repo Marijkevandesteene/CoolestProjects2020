@@ -667,7 +667,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &230946150
 RectTransform:
   m_ObjectHideFlags: 0
@@ -816,132 +816,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f364c02c8142d5449831b88ca1995872, type: 3}
---- !u!1001 &300725152
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 1083565166789257745, guid: 1362ad46ab6e15d478976ec8fe98f667,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1083565166789257759, guid: 1362ad46ab6e15d478976ec8fe98f667,
-        type: 3}
-      propertyPath: chestText
-      value: 
-      objectReference: {fileID: 1970778528}
-    - target: {fileID: 1083565166789257759, guid: 1362ad46ab6e15d478976ec8fe98f667,
-        type: 3}
-      propertyPath: collectedText
-      value: 
-      objectReference: {fileID: 1252887082}
-    - target: {fileID: 1083565166789257759, guid: 1362ad46ab6e15d478976ec8fe98f667,
-        type: 3}
-      propertyPath: healthText
-      value: 
-      objectReference: {fileID: 1835480634}
-    - target: {fileID: 1083565166789257759, guid: 1362ad46ab6e15d478976ec8fe98f667,
-        type: 3}
-      propertyPath: livesText
-      value: 
-      objectReference: {fileID: 230946151}
-    - target: {fileID: 1083565167128703726, guid: 1362ad46ab6e15d478976ec8fe98f667,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 47.801254
-      objectReference: {fileID: 0}
-    - target: {fileID: 1083565167128703726, guid: 1362ad46ab6e15d478976ec8fe98f667,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 13.129451
-      objectReference: {fileID: 0}
-    - target: {fileID: 1083565167128703726, guid: 1362ad46ab6e15d478976ec8fe98f667,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 67.54549
-      objectReference: {fileID: 0}
-    - target: {fileID: 1083565167128703726, guid: 1362ad46ab6e15d478976ec8fe98f667,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1083565167128703726, guid: 1362ad46ab6e15d478976ec8fe98f667,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1083565167128703726, guid: 1362ad46ab6e15d478976ec8fe98f667,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1083565167128703726, guid: 1362ad46ab6e15d478976ec8fe98f667,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1083565167128703726, guid: 1362ad46ab6e15d478976ec8fe98f667,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 28
-      objectReference: {fileID: 0}
-    - target: {fileID: 1083565167128703726, guid: 1362ad46ab6e15d478976ec8fe98f667,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1083565167128703726, guid: 1362ad46ab6e15d478976ec8fe98f667,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1083565167128703726, guid: 1362ad46ab6e15d478976ec8fe98f667,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1083565167128703727, guid: 1362ad46ab6e15d478976ec8fe98f667,
-        type: 3}
-      propertyPath: m_Name
-      value: GameController
-      objectReference: {fileID: 0}
-    - target: {fileID: 1083565167128703727, guid: 1362ad46ab6e15d478976ec8fe98f667,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4926583738436001364, guid: 1362ad46ab6e15d478976ec8fe98f667,
-        type: 3}
-      propertyPath: collectedText
-      value: 
-      objectReference: {fileID: 1252887082}
-    - target: {fileID: 4926583738436001364, guid: 1362ad46ab6e15d478976ec8fe98f667,
-        type: 3}
-      propertyPath: chestText
-      value: 
-      objectReference: {fileID: 1970778528}
-    - target: {fileID: 4926583738436001364, guid: 1362ad46ab6e15d478976ec8fe98f667,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 1362ad46ab6e15d478976ec8fe98f667, type: 3}
---- !u!114 &300725153 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 4926583738436001364, guid: 1362ad46ab6e15d478976ec8fe98f667,
-    type: 3}
-  m_PrefabInstance: {fileID: 300725152}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 20af9edd010f85141a6038ddee636207, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &310847677
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1081,9 +955,9 @@ MonoBehaviour:
     m_LineSpacing: 1
   m_Text: Er is een grot voor mijn huisje. Als je daarin gaat dan kom je in een woestijn.
     Daar staat een kasteel. De ridder die daar woont heeft mijn smaragd gestolen.
-    kun je hem voor mij terughalen? Pas op want daar zijn eer veel ridders die niet
-    van indringers houden. Hier in de buurt zijn er munten waarmee je extra levens
-    bij mij kan kopen. Alvast bedankt!
+    Kun je hem voor mij terughalen? Pas op want daar zijn veel ridders die niet van
+    indringers houden. Hier in de buurt zijn er munten waarmee je extra levens bij
+    mij kan kopen. Alvast bedankt!
 --- !u!222 &314676393
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1635,7 +1509,7 @@ PrefabInstance:
         type: 3}
       propertyPath: gs
       value: 
-      objectReference: {fileID: 300725153}
+      objectReference: {fileID: 0}
     - target: {fileID: 7339454127979541710, guid: 28bdc856f5e08434dab8ae9fc5498a13,
         type: 3}
       propertyPath: m_Name
@@ -3036,7 +2910,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh32694
+  m_Name: pb_Mesh68290
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -3730,7 +3604,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1835480633
 RectTransform:
   m_ObjectHideFlags: 0
