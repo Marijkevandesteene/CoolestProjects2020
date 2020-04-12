@@ -1273,7 +1273,6 @@ GameObject:
   - component: {fileID: 390888924}
   - component: {fileID: 390888923}
   - component: {fileID: 390888926}
-  - component: {fileID: 390888927}
   m_Layer: 0
   m_Name: Terrain
   m_TagString: Untagged
@@ -1357,20 +1356,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &390888927
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 390888922}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 62db16e4689372444be0a5d0470dba68, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  countText: {fileID: 0}
-  chestText: {fileID: 0}
 --- !u!1001 &415149015
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2641,14 +2626,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: GameController
       objectReference: {fileID: 0}
+    - target: {fileID: 1083565167128703727, guid: 1362ad46ab6e15d478976ec8fe98f667,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4926583738436001364, guid: 1362ad46ab6e15d478976ec8fe98f667,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1362ad46ab6e15d478976ec8fe98f667, type: 3}
---- !u!1 &654907708 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1083565166789257745, guid: 1362ad46ab6e15d478976ec8fe98f667,
-    type: 3}
-  m_PrefabInstance: {fileID: 654907707}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &727696095 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100050, guid: ba24e610e0a338545b447ff44a3cf1cc,
@@ -3698,7 +3687,7 @@ PrefabInstance:
         type: 3}
       propertyPath: GameSaveObject
       value: 
-      objectReference: {fileID: 654907708}
+      objectReference: {fileID: 0}
     - target: {fileID: 7339454127979541710, guid: 28bdc856f5e08434dab8ae9fc5498a13,
         type: 3}
       propertyPath: m_Name
@@ -5103,6 +5092,16 @@ PrefabInstance:
       propertyPath: countText
       value: 
       objectReference: {fileID: 985046323}
+    - target: {fileID: 3495392196994745471, guid: f364c02c8142d5449831b88ca1995872,
+        type: 3}
+      propertyPath: collectedText
+      value: 
+      objectReference: {fileID: 985046323}
+    - target: {fileID: 3495392196994745471, guid: f364c02c8142d5449831b88ca1995872,
+        type: 3}
+      propertyPath: chestText
+      value: 
+      objectReference: {fileID: 77409581}
     - target: {fileID: 3495392197180135639, guid: f364c02c8142d5449831b88ca1995872,
         type: 3}
       propertyPath: m_IsTrigger
@@ -5171,6 +5170,11 @@ PrefabInstance:
     - target: {fileID: 3495392197961804550, guid: f364c02c8142d5449831b88ca1995872,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3495392197964130598, guid: f364c02c8142d5449831b88ca1995872,
+        type: 3}
+      propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

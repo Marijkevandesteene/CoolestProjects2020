@@ -8,6 +8,7 @@ TagManager:
   - chest
   - Start
   - smaragd
+  - deur
   layers:
   - Default
   - TransparentFX

@@ -7,20 +7,46 @@ using Random = UnityEngine.Random;
 
 public class CoinSystem : MonoBehaviour
 {
-    private int count;
-    private int ChestContent;
-    public Text countText;
+    private int health = 0;
+    private int lives = 10;
+    private int chestContent = 0;
+    private int collected = 0;
+    public Text healthText;
+    public Text livesText;
     public Text chestText;
+    public Text collectedText;
 
-    public GameSave gs;
-    
+    /// <summary>Static reference to the instance of our DataManager</summary>
+    public static CoinSystem instance;
+
+    /// <summary>Awake is called when the script instance is being loaded.</summary>
+    void Awake()
+    {
+        //Debug.Log("Before Awaking Game");
+        //logPlayerPrefs();
+        // If the instance reference has not been set, yet, 
+        if (instance == null)
+        {
+            // Set this instance as the instance reference.
+            instance = this;
+        }
+        else if (instance != this)
+        {
+            // If the instance reference has already been set, and this is not the
+            // the instance reference, destroy this game object.
+            Destroy(gameObject);
+        }
+
+        // Do not destroy this object, when we load a new scene.
+        //DontDestroyOnLoad(gameObject)
+        PlayerPrefs.SetInt("Health", 0);
+        PlayerPrefs.SetInt("Lives", 0);
+    }
+
     // Start is called before the first frame update
     void Start()
     {
-        count = PlayerPrefs.GetInt("Collected");
-        ChestContent = PlayerPrefs.GetInt("ChestContent");
-        gs = new GameSave();
-        SetCountText();
+        loadGame();
     }
 
     // Update is called once per frame
@@ -29,9 +55,10 @@ public class CoinSystem : MonoBehaviour
 
     }
 
-    public int getCollected()
+    public void logPlayerPrefs()
     {
-        return this.count;    
+        Debug.Log("Collected: " + this.collected + " - PlayerPref: " + PlayerPrefs.GetInt("Collected"));
+        Debug.Log("chestContent: " + this.chestContent + " - PlayerPref: " + PlayerPrefs.GetInt("ChestContent"));
     }
 
     void OnTriggerEnter(Collider other)
@@ -39,42 +66,64 @@ public class CoinSystem : MonoBehaviour
         if (other.gameObject.CompareTag("coins"))
         {
             other.gameObject.SetActive(false);
-            count = count + 1;
-            SetCountText();
-            PlayerPrefs.SetInt("Collected", count);
- //           gs.setCollected(count);
-         }
+            this.collected = this.collected + 1;
+            setCollected(this.collected);
+       }
         else if (other.gameObject.CompareTag("chest"))
         {
-            ChestContent = ChestContent + count;
-            PlayerPrefs.SetInt("ChestContent", ChestContent);
-            PlayerPrefs.SetInt("collected", 0);
-            count = 0;
-            SetChestText();
-            SetCountText();
-
- //           gs.setChestContent(ChestContent);
- //           gs.setCollected(count);
-        }
+            this.chestContent = this.chestContent + this.collected;
+            this.collected = 0;
+            setChestContent(chestContent);
+            setCollected(collected);
+       }
         else if (other.gameObject.CompareTag("smaragd"))
         {
             other.gameObject.SetActive(false);
-            count = count + 100;
-            SetCountText();
-            PlayerPrefs.SetInt("Collected", count);
- //           gs.setCollected(count);
-        }
+            this.collected = this.collected + 100;
+            setCollected(this.collected);
+       }
+       save();
+    }
+
+
+    public void save()
+    {
+        PlayerPrefs.SetInt("ChestContent", this.chestContent);
+        PlayerPrefs.SetInt("Collected", this.collected);
         PlayerPrefs.Save();
+        Debug.Log("Save: ");
+        logPlayerPrefs();
     }
 
-
-    void SetCountText()
+    public void loadGame()
     {
-        countText.text = "coins: " + count.ToString();
+        setChestContent(PlayerPrefs.GetInt("ChestContent"));
+        setCollected(PlayerPrefs.GetInt("Collected"));
+   }
+
+    public void setHealth(int waarde)
+    {
+        this.health = waarde;
+        this.healthText.text = "" + this.health;
     }
 
-    void SetChestText()
+    public void setLives(int waarde)
     {
-        chestText.text = "coins In chest: " + ChestContent.ToString();
+        this.lives = waarde;
+        this.livesText.text = "" + this.lives;
     }
+
+
+    public void setChestContent(int waarde)
+    {
+        this.chestContent = waarde;
+        this.chestText.text = "coins In chest: " + chestContent.ToString();
+    }
+
+    private void setCollected(int waarde)
+    {
+        this.collected = waarde;
+        collectedText.text = "coins: " + collected.ToString();
+     }
+
 }

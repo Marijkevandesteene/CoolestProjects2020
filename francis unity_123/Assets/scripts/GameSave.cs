@@ -38,8 +38,11 @@ public class GameSave : MonoBehaviour
         
         // Do not destroy this object, when we load a new scene.
         DontDestroyOnLoad(gameObject);
-   }
-    
+        PlayerPrefs.SetInt("Health", 0);
+        PlayerPrefs.SetInt("Lives", 0);
+
+    }
+
     // Start is called before the first frame update
     void Start()
     {
@@ -54,29 +57,29 @@ public class GameSave : MonoBehaviour
 
     public void logPlayerPrefs()
     {
-       Debug.Log("Collected: " + this.collected + " - " + PlayerPrefs.GetInt("Collected"));
+        Debug.Log("Collected: " + this.collected + " - " + PlayerPrefs.GetInt("Collected"));
         Debug.Log("chestContent: " + this.chestContent + " - " + PlayerPrefs.GetInt("ChestContent"));
     }
 
     public void save()
     {
-        Debug.Log("Save: ");
-        PlayerPrefs.SetInt("Health", health);
-        PlayerPrefs.SetInt("ChestContent", chestContent);
-        PlayerPrefs.SetInt("Collected", collected);
-        PlayerPrefs.SetInt("Lives", lives);
+        PlayerPrefs.SetInt("ChestContent", this.chestContent);
+        PlayerPrefs.SetInt("Collected", this.collected);
+         //PlayerPrefs.SetInt("Health", health);
+        //PlayerPrefs.SetInt("Lives", lives);
         PlayerPrefs.Save();
-        logPlayerPrefs();
+        //Debug.Log("Save: ");
+        //logPlayerPrefs();
     }
 
     public void loadGame()
     {
-        setHealth(PlayerPrefs.GetInt("Health"));
         setChestContent(PlayerPrefs.GetInt("ChestContent"));
         setCollected(PlayerPrefs.GetInt("Collected"));
-        setLives(PlayerPrefs.GetInt("Lives"));
-        Debug.Log("loading Game");
-        logPlayerPrefs();
+        //setHealth(PlayerPrefs.GetInt("Health"));
+        //setLives(PlayerPrefs.GetInt("Lives"));
+        //Debug.Log("loading Game");
+        //logPlayerPrefs();
     }
 
     public void setHealth(int waarde)
@@ -100,8 +103,13 @@ public class GameSave : MonoBehaviour
 
     public void setCollected(int waarde)
     {
+        Debug.Log("waarde: " + waarde);
+        Debug.Log("collected: " + this.collected);
+
         this.collected = waarde;
         this.collectedText.text = "" + this.collected;
+        Debug.Log("waarde: " + waarde);
+        Debug.Log("collected: " + this.collected);
     }
 
     public void increase5()
