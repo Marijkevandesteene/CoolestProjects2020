@@ -39,8 +39,6 @@ public class CoinSystem : MonoBehaviour
 
         // Do not destroy this object, when we load a new scene.
         //DontDestroyOnLoad(gameObject)
-        PlayerPrefs.SetInt("Health", 0);
-        PlayerPrefs.SetInt("Lives", 0);
     }
 
     // Start is called before the first frame update
@@ -99,7 +97,9 @@ public class CoinSystem : MonoBehaviour
     {
         setChestContent(PlayerPrefs.GetInt("ChestContent"));
         setCollected(PlayerPrefs.GetInt("Collected"));
-   }
+        setLives(PlayerPrefs.GetInt("Lives"));
+
+    }
 
     public void setHealth(int waarde)
     {
@@ -110,20 +110,32 @@ public class CoinSystem : MonoBehaviour
     public void setLives(int waarde)
     {
         this.lives = waarde;
-        this.livesText.text = "" + this.lives;
+        this.livesText.text = "Lives: " + this.lives;
     }
 
 
     public void setChestContent(int waarde)
     {
         this.chestContent = waarde;
-        this.chestText.text = "coins In chest: " + chestContent.ToString();
+        Debug.Log("this.chestContent : " + this.chestContent.ToString());
+        Debug.Log("this.chestText.text : " + this.chestText.text);
+        this.chestText.text = "Coins in Chest: " + this.chestContent.ToString();
+        Debug.Log("this.chestContent : " + this.chestContent);
     }
 
     private void setCollected(int waarde)
     {
         this.collected = waarde;
-        collectedText.text = "coins: " + collected.ToString();
+        this.collectedText.text = "Collected coins: " + this.collected.ToString();
      }
 
+    public void newGame()
+    {
+        this.setChestContent(0);
+        this.setCollected(0);
+        this.setLives(10);
+        Debug.Log("New Game: ");
+        logPlayerPrefs();
+
+   }
 }

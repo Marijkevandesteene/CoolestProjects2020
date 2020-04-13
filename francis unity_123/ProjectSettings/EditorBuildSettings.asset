@@ -6,11 +6,11 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/HuisjesScene.unity
-    guid: 9fc0d4010bbf28b4594072e72b8655ab
-  - enabled: 1
     path: Assets/Scenes/PaddenstoelenKamer.unity
     guid: db9afef7564681a47a8bb5974b091205
+  - enabled: 1
+    path: Assets/Scenes/HuisjesScene.unity
+    guid: 9fc0d4010bbf28b4594072e72b8655ab
   - enabled: 1
     path: Assets/Scenes/BeginScene.unity
     guid: a857a2a72c1867a4d95a9218272067ba
