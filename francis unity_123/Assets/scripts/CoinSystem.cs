@@ -129,12 +129,12 @@ public class CoinSystem : MonoBehaviour
         this.collectedText.text = "Collected coins: " + this.collected.ToString();
      }
 
-    public void newGame()
+    public void resetGame()
     {
-        // this.setChestContent(0);
-        // this.setCollected(0);
-        // this.setLives(10);
-        //this.save();
+        this.setChestContent(0);
+        this.setCollected(0);
+        this.setLives(10);
+        this.save();
         Debug.Log("New Game: ");
         logPlayerPrefs();
 

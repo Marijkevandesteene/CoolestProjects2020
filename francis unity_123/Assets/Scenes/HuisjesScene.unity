@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.4368765, g: 0.48452908, b: 0.5647844, a: 1}
+  m_IndirectSpecularColor: {r: 0.43687674, g: 0.48452938, b: 0.5647846, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1493,7 +1493,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 7.7e-44, y: 1.1e-44, z: 6e-45, w: 1.1754945e-38}
+  m_BoundingSphereOverride: {x: -1.114e-42, y: 6e-45, z: 4e-44, w: 1e-45}
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
@@ -2349,6 +2349,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3495392196994745464, guid: f364c02c8142d5449831b88ca1995872,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3495392196994745467, guid: f364c02c8142d5449831b88ca1995872,
         type: 3}
       propertyPath: m_Enabled
@@ -4192,7 +4197,7 @@ PrefabInstance:
     - target: {fileID: 2464179623579044267, guid: 65e40746ca4d7ea49a639b02d7c173f2,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: newGame
+      value: resetGame
       objectReference: {fileID: 0}
     - target: {fileID: 2464179623579044267, guid: 65e40746ca4d7ea49a639b02d7c173f2,
         type: 3}

@@ -7,13 +7,12 @@ public class DeurBinnengaan : MonoBehaviour
 {
 
     public string LoadScene;
- //   public GameObject GameSaveObject;
-    public CoinSystem cs;
+  //  public CoinSystem cs;
 
     // Start is called before the first frame update
     void Start()
     {
-        cs = new CoinSystem();
+      //  cs = new CoinSystem();
     }
 
     // Update is called once per frame
@@ -26,12 +25,12 @@ public class DeurBinnengaan : MonoBehaviour
     {
         if (other.tag == "Player")
         {
-            cs.save();
+          //  cs.save();
             SceneManager.LoadScene(LoadScene);
         }
         if (other.tag == "Start")
         {
-            cs.save();
+           // cs.save();
             SceneManager.LoadScene("SampleScene");
         }
     }

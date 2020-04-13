@@ -5,9 +5,9 @@ using UnityEngine;
 public class ridderControler : MonoBehaviour
 {
     float snelheid = 0.000001f;
-    float draaisnelheid = 80;
-    float gravity = 8;
-    float draai = 0f;
+    //float draaisnelheid = 80;
+    //float gravity = 8;
+    //float draai = 0f;
     public GameObject ObjectToAttack;
     public Transform target;
 
