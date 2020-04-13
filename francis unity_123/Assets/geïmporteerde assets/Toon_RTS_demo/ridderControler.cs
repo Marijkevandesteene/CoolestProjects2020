@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ridderControler : MonoBehaviour
 {
-    float snelheid = 1;
+    float snelheid = 0.000001f;
     float draaisnelheid = 80;
     float gravity = 8;
     float draai = 0f;
@@ -59,10 +59,8 @@ public class ridderControler : MonoBehaviour
             if (anim.GetBool("aanvallen") == false)
             {
                 anim.SetBool("lopen", true);
-                // ridder animatie 1 : anim.SetInteger("condition", 1);
                 anim.SetInteger("voorwaarde", 1);
-                beweeg = new Vector3(0, 0, -1);
-                beweeg *= snelheid;
+               beweeg = Vector3.MoveTowards(myPosition, FPSposition, snelheid);                
             }
          }
 
@@ -70,7 +68,7 @@ public class ridderControler : MonoBehaviour
         {
             anim.SetBool("lopen", false);
             anim.SetInteger("voorwaarde", 0);
-            beweeg = new Vector3(0, 0, 0);
+            beweeg = Vector3.MoveTowards(myPosition, FPSposition, snelheid);
         }
         controller.Move(beweeg * Time.deltaTime);
 
