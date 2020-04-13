@@ -131,9 +131,10 @@ public class CoinSystem : MonoBehaviour
 
     public void newGame()
     {
-        this.setChestContent(0);
-        this.setCollected(0);
-        this.setLives(10);
+        // this.setChestContent(0);
+        // this.setCollected(0);
+        // this.setLives(10);
+        //this.save();
         Debug.Log("New Game: ");
         logPlayerPrefs();
 
