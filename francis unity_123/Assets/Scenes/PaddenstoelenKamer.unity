@@ -1043,7 +1043,7 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: Er is een grot voor mijn huisje. Als je daarin gaat dan kom je in een woestijn.
-    Daar staat een kasteel. De ridder die daar woont heeft mijn smaragd gestolen.
+    Daar staat een kasteel. De koning die daar woont heeft mijn smaragd gestolen.
     Kun je hem voor mij terughalen? Pas op want daar zijn veel ridders die niet van
     indringers houden. Hier in de buurt zijn er munten waarmee je extra levens bij
     mij kan kopen. Alvast bedankt!
@@ -2879,7 +2879,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh25250
+  m_Name: pb_Mesh28072
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
