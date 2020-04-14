@@ -117,10 +117,10 @@ public class CoinSystem : MonoBehaviour
     public void setChestContent(int waarde)
     {
         this.chestContent = waarde;
-        Debug.Log("this.chestContent : " + this.chestContent.ToString());
-        Debug.Log("this.chestText.text : " + this.chestText.text);
+        //Debug.Log("this.chestContent : " + this.chestContent.ToString());
+        //Debug.Log("this.chestText.text : " + this.chestText.text);
         this.chestText.text = "Coins in Chest: " + this.chestContent.ToString();
-        Debug.Log("this.chestContent : " + this.chestContent);
+        //Debug.Log("this.chestContent : " + this.chestContent);
     }
 
     private void setCollected(int waarde)

@@ -27,11 +27,11 @@ public class WeaponControl : MonoBehaviour
     public void SwordAttack()
     {
        Debug.Log(this.name + " is attacking");
-        animator.SetTrigger("Base_Attack");
+       animator.SetTrigger("Base_Attack");
     }
     public void SecondAttack()
     {
        Debug.Log(this.name + " is attacking");
-        animator.SetTrigger("Second_Attack");
+       animator.SetTrigger("Second_Attack");
     }
 }
