@@ -3878,6 +3878,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cd257b0dc0a553c44950d2b3e87971e5, type: 3}
+--- !u!114 &826943750 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 672610641612032456, guid: cd257b0dc0a553c44950d2b3e87971e5,
+    type: 3}
+  m_PrefabInstance: {fileID: 826943749}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &872720550
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6180,6 +6192,11 @@ PrefabInstance:
       propertyPath: livesText
       value: 
       objectReference: {fileID: 1459166937}
+    - target: {fileID: 3495392196994745471, guid: f364c02c8142d5449831b88ca1995872,
+        type: 3}
+      propertyPath: smaragdText
+      value: 
+      objectReference: {fileID: 826943750}
     - target: {fileID: 3495392197180135639, guid: f364c02c8142d5449831b88ca1995872,
         type: 3}
       propertyPath: m_IsTrigger
