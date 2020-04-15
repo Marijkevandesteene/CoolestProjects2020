@@ -150,7 +150,6 @@ public class CoinSystem : MonoBehaviour
         this.setSmaragd(0);
         this.save();
         Debug.Log("New Game: ");
-        logPlayerPrefs();
-
+        //logPlayerPrefs();
    }
 }
