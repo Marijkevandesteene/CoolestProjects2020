@@ -19,10 +19,12 @@ public class ItemPicker : MonoBehaviour
             // If the instance reference has already been set, and this is not the
             // the instance reference, destroy this game object.
 
-            //Destroy(gameObject);
+            Destroy(gameObject);
+            Debug.Log("not me");
         }
 
         // Do not destroy this object, when we load a new scene.
+        Debug.Log("awake");
         DontDestroyOnLoad(gameObject);
     }
 
