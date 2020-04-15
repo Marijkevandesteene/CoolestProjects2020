@@ -106,13 +106,10 @@ public class CoinSystem : MonoBehaviour
 
     public void loadGame()
     {
-        logPlayerPrefs();
         setChestContent(PlayerPrefs.GetInt("ChestContent"));
         setCollected(PlayerPrefs.GetInt("Collected"));
         setLives(PlayerPrefs.GetInt("Lives"));
         setSmaragd(PlayerPrefs.GetInt("Smaragd"));
-
-
     }
 
     public void setHealth(int waarde)
