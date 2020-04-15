@@ -1356,7 +1356,6 @@ GameObject:
   - component: {fileID: 7540317153608228961}
   - component: {fileID: 7540317153598935003}
   - component: {fileID: 6028669458108848643}
-  - component: {fileID: 6028669458108848668}
   - component: {fileID: 6028669458108848669}
   m_Layer: 0
   m_Name: paladin
@@ -1372,8 +1371,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7540317153608465473}
-  m_LocalRotation: {x: -0, y: -0.70230865, z: -0.0000000087960155, w: -0.71187264}
-  m_LocalPosition: {x: 44.86673, y: 11.541, z: 66.717}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 7540317153608228925}
@@ -1382,7 +1381,7 @@ Transform:
   - {fileID: 6027428483415070991}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: -270.775, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &7540317153598935003
 Animator:
   serializedVersion: 3
@@ -1398,10 +1397,7 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
-  m_WarningMessage: "\nBinding warning: Some generic clip(s) animate transforms that
-    are already bound by a Humanoid avatar. These transforms can only be changed by
-    Humanoid clips.\n\tTransform 'hips'\n\tTransform 'spine'\n\tTransform 'hips'\n\tTransform
-    'hips'\n\tFrom animation clip 'Attack'"
+  m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
@@ -1421,20 +1417,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!136 &6028669458108848668
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7540317153608465473}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  m_Radius: 0.5
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0, y: 1, z: 0}
 --- !u!114 &6028669458108848669
 MonoBehaviour:
   m_ObjectHideFlags: 0
