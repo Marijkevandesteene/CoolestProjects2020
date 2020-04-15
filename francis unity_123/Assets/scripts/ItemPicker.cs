@@ -20,11 +20,10 @@ public class ItemPicker : MonoBehaviour
             // the instance reference, destroy this game object.
 
             Destroy(gameObject);
-            Debug.Log("not me");
         }
 
         // Do not destroy this object, when we load a new scene.
-        Debug.Log("awake");
+        //Debug.Log("awake");
         DontDestroyOnLoad(gameObject);
     }
 
