@@ -144,6 +144,7 @@ public class CoinSystem : MonoBehaviour
     }
     public void resetGame()
     {
+        Debug.Log("New Game: ");
         this.setChestContent(0);
         this.setCollected(0);
         this.setLives(3);
