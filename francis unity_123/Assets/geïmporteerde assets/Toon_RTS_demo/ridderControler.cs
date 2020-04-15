@@ -46,7 +46,7 @@ public class ridderControler : MonoBehaviour
         {
             transform.LookAt(ObjectToAttack.transform);
         }
-        if (distance <= 5)
+        if (distance <= 2)
         {
             anim.SetBool("aanvallen", true);
             anim.SetBool("lopen", false);
@@ -77,6 +77,7 @@ public class ridderControler : MonoBehaviour
         if (Input.GetKeyUp(KeyCode.G))
         {
             anim.SetBool("lopen", false);
+            anim.SetInteger("voorwaarde", 2);
         }        
     }
 
