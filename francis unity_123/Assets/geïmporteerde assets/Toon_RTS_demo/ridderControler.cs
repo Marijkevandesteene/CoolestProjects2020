@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI; 
 
 public class ridderControler : MonoBehaviour
 {
@@ -18,12 +19,16 @@ public class ridderControler : MonoBehaviour
 
     Animator anim;
     CharacterController controller;
+    NavMeshAgent nmagent; 
+
+
 
     // Start is called before the first frame update
     void Start()
     {
         anim = this.GetComponent<Animator>();
         controller = this.GetComponent<CharacterController>();
+        nmagent = this.GetComponent<NavMeshAgent>();
         target = ObjectToAttack.transform;
         anim.SetInteger("voorwaarde", 2);
     }
@@ -31,26 +36,26 @@ public class ridderControler : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Movement();
+        Animate();
     }
 
-    void Movement()
+    void Animate()
     {
         Vector3 myPosition = transform.position;
         Vector3 FPSposition = ObjectToAttack.transform.position;
         float distance = Vector3.Distance(myPosition, FPSposition);
-        float step = snelheid * Time.deltaTime; // calculate distance to move
-
-
+ 
         if (distance >= 1 && distance <= 15)
         {
             transform.LookAt(ObjectToAttack.transform);
+            Debug.Log("distance is distance >= 1 && distance <= 15 " + distance);
         }
-        if (distance <= 5)
+        if (distance <= 2.5)
         {
             anim.SetBool("aanvallen", true);
             anim.SetBool("lopen", false);
             anim.SetInteger("voorwaarde", 0);
+            Debug.Log("distance is distance <= 2.5 " + distance);
         }
         else
         {
@@ -59,6 +64,7 @@ public class ridderControler : MonoBehaviour
             {
                 anim.SetInteger("voorwaarde", 2);
             }
+            Debug.Log("distance is distance <= 2.5 " + distance);
         }
         if (Input.GetKey(KeyCode.G))
         {
@@ -69,14 +75,12 @@ public class ridderControler : MonoBehaviour
             {
                 anim.SetBool("lopen", true);
                 anim.SetInteger("voorwaarde", 1);
-                beweeg = new Vector3(0, 0, -1);
-
-                controller.Move(beweeg * Time.deltaTime);
-            }
+             }
         }
         if (Input.GetKeyUp(KeyCode.G))
         {
             anim.SetBool("lopen", false);
+            anim.SetInteger("voorwaarde", 2);
         }        
     }
 

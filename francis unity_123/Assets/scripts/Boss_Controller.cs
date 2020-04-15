@@ -19,6 +19,7 @@ public class Boss_Controller : MonoBehaviour
     {
         anim = this.GetComponent<Animator>();
         controller = this.GetComponent<CharacterController>();
+        transform.position = new Vector3(44, 0, 66);
         //target = ObjectToAttack.transform;
     }
 
