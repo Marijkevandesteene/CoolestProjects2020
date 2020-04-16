@@ -99,7 +99,7 @@ public class CoinSystem : MonoBehaviour
         this.chestText.text = "Coins in Chest: " + this.chestContent.ToString();
     }
 
-    public void getChestContent()
+    public int getChestContent()
     {
         return this.chestContent;
     }
