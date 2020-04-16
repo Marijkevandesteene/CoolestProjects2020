@@ -48,14 +48,14 @@ public class ridderControler : MonoBehaviour
         if (distance >= 1 && distance <= 15)
         {
             transform.LookAt(ObjectToAttack.transform);
-            Debug.Log("distance is distance >= 1 && distance <= 15 " + distance);
+            //Debug.Log("distance is distance >= 1 && distance <= 15 " + distance);
         }
         if (distance <= 2.5)
         {
             anim.SetBool("aanvallen", true);
             anim.SetBool("lopen", false);
             anim.SetInteger("voorwaarde", 0);
-            Debug.Log("distance is distance <= 2.5 " + distance);
+            //Debug.Log("distance is distance <= 2.5 " + distance);
         }
         else
         {
@@ -64,7 +64,7 @@ public class ridderControler : MonoBehaviour
             {
                 anim.SetInteger("voorwaarde", 2);
             }
-            Debug.Log("distance is distance <= 2.5 " + distance);
+            //Debug.Log("distance is distance <= 2.5 " + distance);
         }
         if (Input.GetKey(KeyCode.G))
         {
