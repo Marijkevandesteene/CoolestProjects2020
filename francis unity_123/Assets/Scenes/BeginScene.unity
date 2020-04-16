@@ -3976,6 +3976,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 842546120}
     m_Modifications:
+    - target: {fileID: 6028669458108848669, guid: b3b272dd6ea8b28479d95f80dbd92f47,
+        type: 3}
+      propertyPath: ObjectToAttack
+      value: 
+      objectReference: {fileID: 356925887}
     - target: {fileID: 7540317153603186971, guid: b3b272dd6ea8b28479d95f80dbd92f47,
         type: 3}
       propertyPath: m_AABB.m_Center.x
