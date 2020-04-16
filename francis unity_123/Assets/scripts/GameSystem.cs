@@ -79,6 +79,7 @@ public class GameSystem : MonoBehaviour
     {
 
         GameInit();
+        _coinSystem.loadGame();
 
     }
 

@@ -20,7 +20,7 @@ public class MyPlayerController : MonoBehaviour
         if (_gameSystem && _coinSystem)
             Debug.Log("...Init of gamesystem and coinsystem done");
 
-
+        _coinSystem.loadGame();
 
     }
 
@@ -36,8 +36,8 @@ public class MyPlayerController : MonoBehaviour
         if (other.gameObject.CompareTag("coins"))
         {
             other.gameObject.SetActive(false);
-            //_coinSystem.setCollected(_coinSystem.getCollected() + 1);
-            _coinSystem.increaseCollected(1);
+            _coinSystem.setCollected(_coinSystem.getCollected() + 1);
+            //_coinSystem.increaseCollected(1);
 
             // this.collected = this.collected + 1;
             // setCollected(this.collected);
