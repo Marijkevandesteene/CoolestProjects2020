@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.UIElements;
+using UnityStandardAssets.Characters.FirstPerson;
 
 [RequireComponent(typeof(CoinSystem))]
 public class GameSystem : MonoBehaviour
@@ -23,9 +24,21 @@ public class GameSystem : MonoBehaviour
 
     private bool _menuActive = false;
 
+    public GameObject _playerObject = null;
+    private FirstPersonController _playerController = null;
+
+
+
+
     public CoinSystem coinSystem
     {
-        get{ return this._coinSystem; }
+        get{
+
+            if (!_coinSystem)
+                this.GameInit();
+            return this._coinSystem;
+        
+        }
         
     }
 
@@ -42,6 +55,7 @@ public class GameSystem : MonoBehaviour
             _gameSystem = new GameSystem();
 
         _coinSystem = this.GetComponent<CoinSystem>();
+        _playerController = _playerObject.GetComponent<FirstPersonController>();
 
         this._menuPanel.enabled = false;
 
@@ -73,6 +87,11 @@ public class GameSystem : MonoBehaviour
     {
         this._menuActive = active;
         this._menuPanel.enabled = _menuActive;
+
+        if (_menuActive)
+            this._playerController.enabled = false;
+        else
+            this._playerController.enabled = true;
 
     }
 
