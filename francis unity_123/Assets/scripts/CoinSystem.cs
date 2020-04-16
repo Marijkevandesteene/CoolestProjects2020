@@ -99,6 +99,37 @@ public class CoinSystem : MonoBehaviour
         this.chestText.text = "Coins in Chest: " + this.chestContent.ToString();
     }
 
+    public void getChestContent()
+    {
+        return this.chestContent;
+    }
+
+    public void increaseChestContent()
+    {
+        //
+        this.chestContent = this.chestContent + this.collected;
+        this.collected = 0;
+        if (this.chestContent >= 10)
+        {
+            this.chestContent = this.chestContent - 10;
+            this.lives = this.lives + 1;
+        }
+        setChestContent(this.chestContent);
+        setLives(this.lives);
+        setCollected(this.collected);
+        /*  this.chestContent = this.chestContent + this.collected;
+            if (this.chestContent >= 10)
+            {
+                this.chestContent = this.chestContent - 10;
+                this.lives = this.lives + 1;
+            }
+            this.collected = 0;
+            setChestContent(chestContent);
+            setLives(lives);
+            setCollected(collected);*/
+        this.chestText.text = "Coins in Chest: " + this.chestContent.ToString();
+    }
+
     public void setCollected(int waarde)
     {
         this.collected = waarde;
@@ -108,6 +139,12 @@ public class CoinSystem : MonoBehaviour
     public int getCollected()
     {
         return this.collected;
+    }
+
+    public void increaseCollected(int waarde)
+    {
+        this.collected = this.collected + waarde;
+        this.collectedText.text = "Collected coins: " + this.collected.ToString();
     }
 
     public void setSmaragd(int waarde)

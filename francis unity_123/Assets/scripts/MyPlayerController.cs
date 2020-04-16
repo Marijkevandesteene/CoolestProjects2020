@@ -36,15 +36,19 @@ public class MyPlayerController : MonoBehaviour
         if (other.gameObject.CompareTag("coins"))
         {
             other.gameObject.SetActive(false);
-            _coinSystem.setCollected(_coinSystem.getCollected() + 1);
+            //_coinSystem.setCollected(_coinSystem.getCollected() + 1);
+            _coinSystem.increaseCollected(1);
 
-
-           // this.collected = this.collected + 1;
-           // setCollected(this.collected);
+            // this.collected = this.collected + 1;
+            // setCollected(this.collected);
         }
         else if (other.gameObject.CompareTag("chest"))
         {
-          /*  this.chestContent = this.chestContent + this.collected;
+            // misschien beter volledig naar increase functie?
+            _coinSystem.increaseChestContent();
+            //_coinSystem.increaseChestContent(_coinSystem.getCollected());
+
+            /*  this.chestContent = this.chestContent + this.collected;
             if (this.chestContent >= 10)
             {
                 this.chestContent = this.chestContent - 10;
