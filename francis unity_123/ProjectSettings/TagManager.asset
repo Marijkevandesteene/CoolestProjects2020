@@ -11,6 +11,8 @@ TagManager:
   - deur
   - ridder
   - FPSsword
+  - Fire
+  - GameSystem
   layers:
   - Default
   - TransparentFX

@@ -22,7 +22,7 @@ public class CoinSystem : MonoBehaviour
     public static CoinSystem instance;
 
     /// <summary>Awake is called when the script instance is being loaded.</summary>
-    void Awake()
+  /*  void Awake()
     {
         //Debug.Log("Before Awaking Game");
         //logPlayerPrefs();
@@ -42,20 +42,17 @@ public class CoinSystem : MonoBehaviour
         // Do not destroy this object, when we load a new scene.
         //DontDestroyOnLoad(gameObject)
     }
-
+    */
     // Start is called before the first frame update
-    void Start()
+    void Initialize()
     {
+        Debug.Log("Starting main gameloop");
+
         //resetGame();
         loadGame();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
-
+  
     public void logPlayerPrefs()
     {
         Debug.Log("Collected: " + this.collected + " - PlayerPref: " + PlayerPrefs.GetInt("Collected"));
@@ -64,36 +61,7 @@ public class CoinSystem : MonoBehaviour
         Debug.Log("smaragd: " + this.smaragd + " - PlayerPref: " + PlayerPrefs.GetInt("Smaragd"));
     }
 
-    void OnTriggerEnter(Collider other)
-    {
-        if (other.gameObject.CompareTag("coins"))
-        {
-            other.gameObject.SetActive(false);
-            this.collected = this.collected + 1;
-            setCollected(this.collected);
-       }
-        else if (other.gameObject.CompareTag("chest"))
-        {
-            this.chestContent = this.chestContent + this.collected;
-            if (this.chestContent >= 10)
-            {
-                this.chestContent = this.chestContent - 10;
-                this.lives = this.lives + 1;
-            }
-            this.collected = 0;
-            setChestContent(chestContent);
-            setLives(lives);
-            setCollected(collected);
-       }
-        else if (other.gameObject.CompareTag("smaragd"))
-        {
-            other.gameObject.SetActive(false);
-            this.smaragd = this.smaragd + 1;
-            setSmaragd(this.smaragd);
-       }
-       save();
-    }
-
+  
 
     public void save()
     {
@@ -106,13 +74,10 @@ public class CoinSystem : MonoBehaviour
 
     public void loadGame()
     {
-        logPlayerPrefs();
         setChestContent(PlayerPrefs.GetInt("ChestContent"));
         setCollected(PlayerPrefs.GetInt("Collected"));
         setLives(PlayerPrefs.GetInt("Lives"));
         setSmaragd(PlayerPrefs.GetInt("Smaragd"));
-
-
     }
 
     public void setHealth(int waarde)
@@ -134,26 +99,36 @@ public class CoinSystem : MonoBehaviour
         this.chestText.text = "Coins in Chest: " + this.chestContent.ToString();
     }
 
-    private void setCollected(int waarde)
+    public void setCollected(int waarde)
     {
         this.collected = waarde;
         this.collectedText.text = "Collected coins: " + this.collected.ToString();
      }
 
-    private void setSmaragd(int waarde)
+    public int getCollected()
+    {
+        return this.collected;
+    }
+
+    public void setSmaragd(int waarde)
     {        
         this.smaragd = waarde;
         this.smaragdText.text = "Smaragd: " + this.smaragd.ToString();
     }
+
+    public int getSmaragd ()
+    {
+        return this.smaragd;
+    }
     public void resetGame()
     {
+        Debug.Log("New Game: ");
         this.setChestContent(0);
         this.setCollected(0);
         this.setLives(3);
         this.setSmaragd(0);
         this.save();
         Debug.Log("New Game: ");
-        logPlayerPrefs();
-
+        //logPlayerPrefs();
    }
 }

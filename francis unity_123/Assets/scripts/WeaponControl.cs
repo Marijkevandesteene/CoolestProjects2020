@@ -5,16 +5,24 @@ using UnityEngine;
 public class WeaponControl : MonoBehaviour
 {
     private Animator animator;
+    private GameSystem _gameSystem ;
     // Start is called before the first frame update
     void Start()
     {
         animator = GetComponent<Animator>();
+
+        _gameSystem = GameObject.FindObjectOfType<GameSystem>();
+
     }
 
     // Update is called once per frame
     void Update()
     {
         //if (Input.GetKeyDown(KeyCode.X))
+
+        if (_gameSystem.menuActive)
+            return;
+
         if (Input.GetMouseButtonDown(0))
         {
             SwordAttack();
