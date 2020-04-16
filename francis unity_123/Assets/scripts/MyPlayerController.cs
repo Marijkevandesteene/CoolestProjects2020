@@ -20,9 +20,7 @@ public class MyPlayerController : MonoBehaviour
         if (_gameSystem && _coinSystem)
             Debug.Log("...Init of gamesystem and coinsystem done");
 
-        _coinSystem.loadGame();
-
-    }
+     }
 
     // Update is called once per frame
     void Update()
@@ -36,8 +34,9 @@ public class MyPlayerController : MonoBehaviour
         if (other.gameObject.CompareTag("coins"))
         {
             other.gameObject.SetActive(false);
-            _coinSystem.setCollected(_coinSystem.getCollected() + 1);
-            //_coinSystem.increaseCollected(1);
+            Debug.Log("...Collecting Coins");
+            //_coinSystem.setCollected(_coinSystem.getCollected() + 1);
+            _coinSystem.increaseCollected(1);
 
             // this.collected = this.collected + 1;
             // setCollected(this.collected);
@@ -65,7 +64,7 @@ public class MyPlayerController : MonoBehaviour
 
             other.gameObject.SetActive(false);
 
-            _coinSystem.setSmaragd(_coinSystem.getSmaragd()+1);
+            _coinSystem.increaseSmaragd(1);
 
             //this.smaragd = this.smaragd + 1;
             //setSmaragd(this.smaragd);

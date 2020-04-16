@@ -61,8 +61,6 @@ public class CoinSystem : MonoBehaviour
         Debug.Log("smaragd: " + this.smaragd + " - PlayerPref: " + PlayerPrefs.GetInt("Smaragd"));
     }
 
-  
-
     public void save()
     {
         PlayerPrefs.SetInt("ChestContent", this.chestContent);
@@ -150,6 +148,12 @@ public class CoinSystem : MonoBehaviour
     public void setSmaragd(int waarde)
     {        
         this.smaragd = waarde;
+        this.smaragdText.text = "Smaragd: " + this.smaragd.ToString();
+    }
+
+    public void increaseSmaragd(int waarde)
+    {
+        this.smaragd = this.smaragd + waarde;
         this.smaragdText.text = "Smaragd: " + this.smaragd.ToString();
     }
 
