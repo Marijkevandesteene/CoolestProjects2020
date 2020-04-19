@@ -47,16 +47,6 @@ public class MyPlayerController : MonoBehaviour
             _coinSystem.increaseChestContent();
             //_coinSystem.increaseChestContent(_coinSystem.getCollected());
 
-            /*  this.chestContent = this.chestContent + this.collected;
-            if (this.chestContent >= 10)
-            {
-                this.chestContent = this.chestContent - 10;
-                this.lives = this.lives + 1;
-            }
-            this.collected = 0;
-            setChestContent(chestContent);
-            setLives(lives);
-            setCollected(collected);*/
         }
         else if (other.gameObject.CompareTag("smaragd"))
         {

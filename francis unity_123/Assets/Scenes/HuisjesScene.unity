@@ -3180,6 +3180,18 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1061969586}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1165485570
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1165485569}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 997e6e66304080247a1edba4c9c8abea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1191637899
 GameObject:
   m_ObjectHideFlags: 0
@@ -5019,9 +5031,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 863012325, guid: 03088b11cb8e30f4181dce7cf1318de1, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 863012327, guid: 03088b11cb8e30f4181dce7cf1318de1, type: 3}
       propertyPath: m_Sprite
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 863012327, guid: 03088b11cb8e30f4181dce7cf1318de1, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1337995313, guid: 03088b11cb8e30f4181dce7cf1318de1, type: 3}
       propertyPath: m_IsActive
