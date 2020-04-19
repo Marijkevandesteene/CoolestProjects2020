@@ -706,7 +706,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-34936
+  m_Name: pb_Mesh-1444
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -1404,7 +1404,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-34938
+  m_Name: pb_Mesh-1446
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -1756,7 +1756,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: -0, z: -0, w: -0}
+  m_BoundingSphereOverride: {x: 5.357e-42, y: 6e-44, z: 0, w: NaN}
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
@@ -1901,6 +1901,12 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 3, y: 3, z: 4.222071}
   m_Center: {x: 0.9221344, y: 0.8373733, z: -0.80068153}
+--- !u!20 &762116110 stripped
+Camera:
+  m_CorrespondingSourceObject: {fileID: 3495392197962364166, guid: f364c02c8142d5449831b88ca1995872,
+    type: 3}
+  m_PrefabInstance: {fileID: 1061969586}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &769675098
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2605,7 +2611,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-34930
+  m_Name: pb_Mesh-1438
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -3629,7 +3635,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-34928
+  m_Name: pb_Mesh-1440
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -5013,6 +5019,82 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 863012327, guid: 03088b11cb8e30f4181dce7cf1318de1, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1337995313, guid: 03088b11cb8e30f4181dce7cf1318de1, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1337995316, guid: 03088b11cb8e30f4181dce7cf1318de1, type: 3}
+      propertyPath: m_PixelPerfect
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1337995316, guid: 03088b11cb8e30f4181dce7cf1318de1, type: 3}
+      propertyPath: m_RenderMode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1337995316, guid: 03088b11cb8e30f4181dce7cf1318de1, type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 762116110}
+    - target: {fileID: 1337995316, guid: 03088b11cb8e30f4181dce7cf1318de1, type: 3}
+      propertyPath: m_TargetDisplay
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1337995317, guid: 03088b11cb8e30f4181dce7cf1318de1, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1337995317, guid: 03088b11cb8e30f4181dce7cf1318de1, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1337995317, guid: 03088b11cb8e30f4181dce7cf1318de1, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1337995317, guid: 03088b11cb8e30f4181dce7cf1318de1, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1337995317, guid: 03088b11cb8e30f4181dce7cf1318de1, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1337995317, guid: 03088b11cb8e30f4181dce7cf1318de1, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1337995317, guid: 03088b11cb8e30f4181dce7cf1318de1, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1337995317, guid: 03088b11cb8e30f4181dce7cf1318de1, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1337995317, guid: 03088b11cb8e30f4181dce7cf1318de1, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1337995317, guid: 03088b11cb8e30f4181dce7cf1318de1, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1337995317, guid: 03088b11cb8e30f4181dce7cf1318de1, type: 3}
+      propertyPath: m_Pivot.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1337995317, guid: 03088b11cb8e30f4181dce7cf1318de1, type: 3}
+      propertyPath: m_Pivot.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1887025680, guid: 03088b11cb8e30f4181dce7cf1318de1, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7247033734665201120, guid: 03088b11cb8e30f4181dce7cf1318de1,
         type: 3}
       propertyPath: m_LocalPosition.x
