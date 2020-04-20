@@ -749,6 +749,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _menuPanel: {fileID: 1887025684}
+  _resetButton: {fileID: 1521968216}
+  _cancelButton: {fileID: 1398326578}
   _playerObject: {fileID: 0}
 --- !u!1001 &7247033736534361182
 PrefabInstance:

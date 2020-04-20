@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.UIElements;
+//using UnityEngine.UIElements;
 using UnityStandardAssets.Characters.FirstPerson;
 
 [RequireComponent(typeof(CoinSystem))]
@@ -20,15 +20,15 @@ public class GameSystem : MonoBehaviour
     private CoinSystem _coinSystem = null;
     public Canvas _menuPanel = null;
 
+    public Button _resetButton;
+    public Button _cancelButton;
+
     // Menu system Variables
 
     private bool _menuActive = false;
 
     public GameObject _playerObject = null;
     private FirstPersonController _playerController = null;
-
-
-
 
     public CoinSystem coinSystem
     {
@@ -61,7 +61,7 @@ public class GameSystem : MonoBehaviour
 
         if (_gameSystem && _coinSystem)
             Debug.Log("...Init of gamesystem and coinsystem done");
-       
+
     }
 
 
@@ -81,9 +81,19 @@ public class GameSystem : MonoBehaviour
         GameInit();
         _coinSystem.loadGame();
 
+        //add listener button.onClick : script reference unity3D documentation
+        Button resetbtn = _resetButton.GetComponent<Button>();
+        resetbtn.onClick.AddListener(_coinSystem.resetGame);
+
+        Button cancelbtn = _cancelButton.GetComponent<Button>();
+        cancelbtn.onClick.AddListener(cancelMenu);
+
+        if (cancelbtn && resetbtn)
+            Debug.Log("...Init of _cancelButton and _resetButton done");
+
     }
 
-    
+
     private void setMenuActive(bool active)
     {
         this._menuActive = active;
