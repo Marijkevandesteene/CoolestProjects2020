@@ -19,9 +19,9 @@ public class ridderControler : MonoBehaviour
 
     Animator anim;
     CharacterController controller;
-    NavMeshAgent nmagent; 
-
-
+    NavMeshAgent nmagent;
+    GameSystem _gameSystem = null;
+    CoinSystem _coinSystem = null;
 
     // Start is called before the first frame update
     void Start()
@@ -31,6 +31,13 @@ public class ridderControler : MonoBehaviour
         nmagent = this.GetComponent<NavMeshAgent>();
         target = ObjectToAttack.transform;
         anim.SetInteger("voorwaarde", 2);
+
+        _gameSystem = GameObject.FindObjectOfType<GameSystem>();
+        _coinSystem = _gameSystem.coinSystem;
+
+        if (_gameSystem && _coinSystem)
+            Debug.Log("...Init of gamesystem and coinsystem done");
+
     }
 
     // Update is called once per frame
@@ -93,5 +100,16 @@ public class ridderControler : MonoBehaviour
         anim.SetInteger("voorwaarde", 0);
         anim.SetBool("aanvallen", false);
     }
+    void OnTriggerEnter(Collider other)
+        {
+        if (other.gameObject.CompareTag("Player"))
+        {
+            _gameSystem.coinSystem.damage(1);
+        }
+
+    }
+
+
+
 
 }

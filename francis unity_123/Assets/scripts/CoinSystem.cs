@@ -90,6 +90,11 @@ public class CoinSystem : MonoBehaviour
         this.livesText.text = "Lives: " + this.lives;
     }
 
+    public void damage(int waarde)
+    {
+        this.lives = this.lives - waarde;
+        this.livesText.text = "Lives: " + this.lives;
+    }
 
     public void setChestContent(int waarde)
     {

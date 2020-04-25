@@ -14,12 +14,22 @@ public class Boss_Controller : MonoBehaviour
     Animator anim;
     CharacterController controller;
 
+    GameSystem _gameSystem = null;
+    CoinSystem _coinSystem = null;
+
+
     // Start is called before the first frame update
     void Start()
     {
         anim = this.GetComponent<Animator>();
         controller = this.GetComponent<CharacterController>();
         //target = ObjectToAttack.transform;
+
+        _gameSystem = GameObject.FindObjectOfType<GameSystem>();
+        _coinSystem = _gameSystem.coinSystem;
+
+        if (_gameSystem && _coinSystem)
+            Debug.Log("...Init of gamesystem and coinsystem done");
     }
 
     // Update is called once per frame
@@ -35,7 +45,7 @@ public class Boss_Controller : MonoBehaviour
         Vector3 targetPosition = new Vector3(ObjectToAttack.transform.position.x,
                                                 this.transform.position.y,
                                                 ObjectToAttack.transform.position.z);
-    
+
         float distance = Vector3.Distance(playerPosition, myPosition);
 
         if (distance <= 10 && distance > 1)
@@ -51,6 +61,13 @@ public class Boss_Controller : MonoBehaviour
         else if (distance > 3)
         {
             anim.SetBool("Boss_Attack", false);
+        }
+    }
+    void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("Player"))
+        {
+            _gameSystem.coinSystem.damage(1);
         }
     }
 }
