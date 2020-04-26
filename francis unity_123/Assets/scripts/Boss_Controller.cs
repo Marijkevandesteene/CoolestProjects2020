@@ -29,7 +29,7 @@ public class Boss_Controller : MonoBehaviour
         _coinSystem = _gameSystem.coinSystem;
 
         if (_gameSystem && _coinSystem)
-            Debug.Log("...Init of gamesystem and coinsystem done");
+            Debug.Log("...Init of gamesystem and coinsystem done: boss controller");
     }
 
     // Update is called once per frame
@@ -54,11 +54,11 @@ public class Boss_Controller : MonoBehaviour
             //new Vector3(ObjectToAttack.transform.position.x, transform.position.y, ObjectToAttack.transform.position.z)
             // te checken met Reinhart??? - transform.lookAt(targetPosition);
         }
-        if (distance <= 3)
+        if (distance <= 2)
         {
             anim.SetBool("Boss_Attack", true);
-        }
-        else if (distance > 3)
+         }
+        else if (distance > 2)
         {
             anim.SetBool("Boss_Attack", false);
         }

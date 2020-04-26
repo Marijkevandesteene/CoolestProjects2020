@@ -36,7 +36,7 @@ public class ridderControler : MonoBehaviour
         _coinSystem = _gameSystem.coinSystem;
 
         if (_gameSystem && _coinSystem)
-            Debug.Log("...Init of gamesystem and coinsystem done");
+            Debug.Log("...Init of gamesystem and coinsystem done: riddercontroller");
 
     }
 
@@ -52,17 +52,22 @@ public class ridderControler : MonoBehaviour
         Vector3 FPSposition = ObjectToAttack.transform.position;
         float distance = Vector3.Distance(myPosition, FPSposition);
  
-        if (distance >= 1 && distance <= 15)
+        if (distance >= 2 && distance <= 15)
         {
             transform.LookAt(ObjectToAttack.transform);
-            //Debug.Log("distance is distance >= 1 && distance <= 15 " + distance);
+            anim.SetBool("lopen", true);
+            anim.SetInteger("voorwaarde", 1);
         }
+
+        //voorwaarde 2 : idle
+        //voorwaarde 1 : walk
+        //voorwaarde 0 : attack
+
         if (distance <= 2.5)
         {
             anim.SetBool("aanvallen", true);
             anim.SetBool("lopen", false);
             anim.SetInteger("voorwaarde", 0);
-            //Debug.Log("distance is distance <= 2.5 " + distance);
         }
         else
         {
@@ -71,24 +76,7 @@ public class ridderControler : MonoBehaviour
             {
                 anim.SetInteger("voorwaarde", 2);
             }
-            //Debug.Log("distance is distance <= 2.5 " + distance);
-        }
-        if (Input.GetKey(KeyCode.G))
-        {
-            if (anim.GetBool("aanvallen") == true)
-            {
-                return;
-            } else
-            {
-                anim.SetBool("lopen", true);
-                anim.SetInteger("voorwaarde", 1);
-             }
-        }
-        if (Input.GetKeyUp(KeyCode.G))
-        {
-            anim.SetBool("lopen", false);
-            anim.SetInteger("voorwaarde", 2);
-        }        
+         }
     }
 
     void Attacking() => StartCoroutine(AttackRoutine());
