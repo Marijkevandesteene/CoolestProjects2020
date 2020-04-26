@@ -6,10 +6,7 @@ using UnityEngine.AI;
 public class ridderControler : MonoBehaviour
 {
     float snelheid = 1000f;
-    //float draaisnelheid = 80;
-    //float gravity = 8;
-    //float draai = 0f;
-    public GameObject ObjectToAttack;
+     public GameObject ObjectToAttack;
     public Transform target;
 
     // Angular speed in radians per sec.
@@ -20,6 +17,7 @@ public class ridderControler : MonoBehaviour
     Animator anim;
     CharacterController controller;
     NavMeshAgent nmagent;
+
     GameSystem _gameSystem = null;
     CoinSystem _coinSystem = null;
 
@@ -38,6 +36,7 @@ public class ridderControler : MonoBehaviour
         if (_gameSystem && _coinSystem)
             Debug.Log("...Init of gamesystem and coinsystem done: riddercontroller");
 
+        //nmagent.stop;
     }
 
     // Update is called once per frame
@@ -51,17 +50,20 @@ public class ridderControler : MonoBehaviour
         Vector3 myPosition = transform.position;
         Vector3 FPSposition = ObjectToAttack.transform.position;
         float distance = Vector3.Distance(myPosition, FPSposition);
- 
-        if (distance >= 2 && distance <= 15)
+
+        if (distance >= 2 && distance <= 10)
+        {
+            //nmagent.stop;
+        }
+
+        if (distance >= 2 && distance <= 10)
         {
             transform.LookAt(ObjectToAttack.transform);
             anim.SetBool("lopen", true);
             anim.SetInteger("voorwaarde", 1);
+            //nmagent.resume;
+            //nmagent.enabled = true;
         }
-
-        //voorwaarde 2 : idle
-        //voorwaarde 1 : walk
-        //voorwaarde 0 : attack
 
         if (distance <= 2.5)
         {
