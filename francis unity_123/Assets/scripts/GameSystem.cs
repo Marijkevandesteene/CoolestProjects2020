@@ -119,6 +119,11 @@ public class GameSystem : MonoBehaviour
         {
             setMenuActive(!_menuActive);
         }
+        if (Input.GetKeyDown(KeyCode.F7))
+        {
+            _coinSystem.resetGame();
+            _coinSystem.loadGame();
+        }
 
     }
 }

@@ -22,33 +22,11 @@ public class CoinSystem : MonoBehaviour
     public static CoinSystem instance;
 
     /// <summary>Awake is called when the script instance is being loaded.</summary>
-  /*  void Awake()
-    {
-        //Debug.Log("Before Awaking Game");
-        //logPlayerPrefs();
-        // If the instance reference has not been set, yet, 
-        if (instance == null)
-        {
-            // Set this instance as the instance reference.
-            instance = this;
-        }
-        else if (instance != this)
-        {
-            // If the instance reference has already been set, and this is not the
-            // the instance reference, destroy this game object.
-            Destroy(gameObject);
-        }
-
-        // Do not destroy this object, when we load a new scene.
-        //DontDestroyOnLoad(gameObject)
-    }
-    */
     // Start is called before the first frame update
     void Initialize()
     {
         Debug.Log("Starting main gameloop");
 
-        //resetGame();
         loadGame();
     }
 
@@ -76,6 +54,15 @@ public class CoinSystem : MonoBehaviour
         setCollected(PlayerPrefs.GetInt("Collected"));
         setLives(PlayerPrefs.GetInt("Lives"));
         setSmaragd(PlayerPrefs.GetInt("Smaragd"));
+    }
+
+    public void resetGame()
+    {
+        this.setChestContent(0);
+        this.setCollected(0);
+        this.setLives(3);
+        this.setSmaragd(0);
+        this.save();
     }
 
     public void setHealth(int waarde)
@@ -119,17 +106,6 @@ public class CoinSystem : MonoBehaviour
         }
         setChestContent(this.chestContent);
         setLives(this.lives);
-        setCollected(this.collected);
-        /*  this.chestContent = this.chestContent + this.collected;
-            if (this.chestContent >= 10)
-            {
-                this.chestContent = this.chestContent - 10;
-                this.lives = this.lives + 1;
-            }
-            this.collected = 0;
-            setChestContent(chestContent);
-            setLives(lives);
-            setCollected(collected);*/
         this.chestText.text = "Coins in Chest: " + this.chestContent.ToString();
     }
 
@@ -166,15 +142,4 @@ public class CoinSystem : MonoBehaviour
     {
         return this.smaragd;
     }
-    public void resetGame()
-    {
-        Debug.Log("New Game: ");
-        this.setChestContent(0);
-        this.setCollected(0);
-        this.setLives(3);
-        this.setSmaragd(0);
-        this.save();
-        Debug.Log("New Game: ");
-        //logPlayerPrefs();
-   }
-}
+  }

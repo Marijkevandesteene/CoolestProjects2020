@@ -43,6 +43,9 @@ public class ridderControler : MonoBehaviour
     void Update()
     {
         Animate();
+ //       NavMeshHit hit;
+ //       if (!nmagent.Raycast(target.position, out hit))       {        }
+
     }
 
     void Animate()
@@ -56,7 +59,7 @@ public class ridderControler : MonoBehaviour
             //nmagent.stop;
         }
 
-        if (distance >= 2 && distance <= 10)
+        if (distance >= 2 && distance <= 15)
         {
             transform.LookAt(ObjectToAttack.transform);
             anim.SetBool("lopen", true);
@@ -92,8 +95,9 @@ public class ridderControler : MonoBehaviour
     }
     void OnTriggerEnter(Collider other)
         {
-        if (other.gameObject.CompareTag("Player"))
+        if (other.gameObject.CompareTag("Player") && anim.GetBool("aanvallen") == true)
         {
+            Debug.Log("... Colliding ridder");
             _gameSystem.coinSystem.damage(1);
         }
 
