@@ -77,6 +77,12 @@ public class CoinSystem : MonoBehaviour
         this.livesText.text = "Lives: " + this.lives;
     }
 
+    public void increaseLives(int waarde)
+    {
+        this.lives = this.lives + waarde;
+        this.livesText.text = "Lives: " + this.lives;
+    }
+
     public int getLives()
     {
         return this.lives;
@@ -102,11 +108,11 @@ public class CoinSystem : MonoBehaviour
     {
         //
         this.chestContent = this.chestContent + this.collected;
-        this.collected = 0;
+        this.setCollected(0);
         if (this.chestContent >= 10)
         {
             this.chestContent = this.chestContent - 10;
-            this.lives = this.lives + 1;
+            increaseLives(1);
         }
         setChestContent(this.chestContent);
         setLives(this.lives);

@@ -129,6 +129,17 @@ public class GameSystem : MonoBehaviour
             _coinSystem.loadGame();
             setMenuActive(false);
         }
+        if (Input.GetKeyDown(KeyCode.F12))
+        {
+            Application.Quit();
+        }
+
 
     }
+    public int getSmaragd()
+    {
+        return _coinSystem.getSmaragd();
+    }
+
+
 }
