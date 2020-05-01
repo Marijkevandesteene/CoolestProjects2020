@@ -115,14 +115,19 @@ public class GameSystem : MonoBehaviour
     {
         
 
-        if (Input.GetKeyDown(KeyCode.F10))
+        if (Input.GetKeyDown(KeyCode.F10) && _coinSystem.getLives() >= 1)
         {
             setMenuActive(!_menuActive);
+        }
+        if (_coinSystem.getLives() <= 0)
+        {
+            setMenuActive(true);
         }
         if (Input.GetKeyDown(KeyCode.F7))
         {
             _coinSystem.resetGame();
             _coinSystem.loadGame();
+            setMenuActive(false);
         }
 
     }

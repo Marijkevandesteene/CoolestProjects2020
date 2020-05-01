@@ -1264,6 +1264,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 57db447a89cf1b04e9a298110d99c922, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _dwergBoodschap: {fileID: 1170485902}
   ObjectToLookAt: {fileID: 745821094}
 --- !u!1001 &773293494
 PrefabInstance:
@@ -2914,7 +2915,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh27574
+  m_Name: pb_Mesh24406
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
