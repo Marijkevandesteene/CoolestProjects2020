@@ -7,7 +7,7 @@ public class ridderControler : MonoBehaviour
 {
     float snelheid = 1000f;
      public GameObject ObjectToAttack;
-    public Transform target;
+    private Transform target;
 
     // Angular speed in radians per sec.
     public float speed = 1.0f;
@@ -64,8 +64,6 @@ public class ridderControler : MonoBehaviour
             transform.LookAt(ObjectToAttack.transform);
             anim.SetBool("lopen", true);
             anim.SetInteger("voorwaarde", 1);
-            //nmagent.resume;
-            //nmagent.enabled = true;
         }
 
         if (distance <= 2.5)
@@ -100,9 +98,15 @@ public class ridderControler : MonoBehaviour
             Debug.Log("... Colliding ridder");
             _gameSystem.coinSystem.damage(1);
         }
+         if (other.gameObject.CompareTag("FPSsword"))
+        {
+            Debug.Log("... Colliding sword");
+            Destroy(gameObject, 1);
+            //_gameSystem.coinSystem.damage(1);
+        }
 
     }
-
+        
 
 
 

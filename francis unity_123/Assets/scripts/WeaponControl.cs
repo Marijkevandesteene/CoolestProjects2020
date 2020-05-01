@@ -6,6 +6,8 @@ public class WeaponControl : MonoBehaviour
 {
     private Animator animator;
     private GameSystem _gameSystem ;
+    public GameObject ObjectToAttack;
+
     // Start is called before the first frame update
     void Start()
     {
