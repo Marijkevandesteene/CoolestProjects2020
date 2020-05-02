@@ -1,12 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.AI; 
+using UnityEngine.AI;
 
 public class ridderControler : MonoBehaviour
 {
     float snelheid = 1000f;
-     public GameObject ObjectToAttack;
+    public GameObject ObjectToAttack;
     private Transform target;
 
     // Angular speed in radians per sec.
@@ -16,6 +16,7 @@ public class ridderControler : MonoBehaviour
 
     Animator anim;
     CharacterController controller;
+    //AICharacterControl aicontrol;
     NavMeshAgent nmagent;
 
     GameSystem _gameSystem = null;
@@ -25,9 +26,11 @@ public class ridderControler : MonoBehaviour
     void Start()
     {
         anim = this.GetComponent<Animator>();
-        controller = this.GetComponent<CharacterController>();
         nmagent = this.GetComponent<NavMeshAgent>();
-        target = ObjectToAttack.transform;
+        controller = this.GetComponent<CharacterController>();
+        //aicontrol = this.GetComponent<AICharacterControl>();
+
+        // target = ObjectToAttack.transform;
         anim.SetInteger("voorwaarde", 2);
 
         _gameSystem = GameObject.FindObjectOfType<GameSystem>();
@@ -36,17 +39,57 @@ public class ridderControler : MonoBehaviour
         if (_gameSystem && _coinSystem)
             Debug.Log("...Init of gamesystem and coinsystem done: riddercontroller");
 
-        //nmagent.stop;
     }
 
     // Update is called once per frame
     void Update()
     {
         Animate();
- //       NavMeshHit hit;
- //       if (!nmagent.Raycast(target.position, out hit))       {        }
 
     }
+
+
+
+    /*
+     * https://docs.unity3d.com/ScriptReference/Physics.Raycast.html
+     * 
+     
+    void FixedUpdate()
+    {
+        Vector3 myPosition = transform.position;
+        Vector3 FPSposition = ObjectToAttack.transform;
+        float distance = Vector3.Distance(myPosition, FPSposition);
+
+
+
+        if (distance >= 2 && distance <= 10)
+        {
+            target = ObjectToAttack.transform;
+            nmagent.target = target;
+            //nmagent.stop;
+        }
+
+        if (distance >= 2 && distance <= 15)
+        {
+            transform.LookAt(ObjectToAttack.transform);
+            anim.SetBool("lopen", true);
+            anim.SetInteger("voorwaarde", 1);
+        }
+
+
+        
+        if (Physics.Raycast(myPosition, FPSposition.TransformDirection(Vector3.forward), out hit, Mathf.Infinity, layerMask))
+        {
+            Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.forward) * hit.distance, Color.yellow);
+            Debug.Log("Did Hit");
+        }
+        else
+        {
+            Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.forward) * 1000, Color.white);
+            Debug.Log("Did not Hit");
+        }
+
+    }*/
 
     void Animate()
     {
@@ -56,6 +99,9 @@ public class ridderControler : MonoBehaviour
 
         if (distance >= 2 && distance <= 10)
         {
+            //aicontrol.target = ObjectToAttack.transform;
+            //this.GetComponent<AICharacterControl>().target = ObjectToAttack.transform;
+            //ThisIsYourObject.GetComponent<AICharacterControl>().target = newTransform
             //nmagent.stop;
         }
 
@@ -79,7 +125,7 @@ public class ridderControler : MonoBehaviour
             {
                 anim.SetInteger("voorwaarde", 2);
             }
-         }
+        }
     }
 
     void Attacking() => StartCoroutine(AttackRoutine());
@@ -92,13 +138,13 @@ public class ridderControler : MonoBehaviour
         anim.SetBool("aanvallen", false);
     }
     void OnTriggerEnter(Collider other)
-        {
+    {
         if (other.gameObject.CompareTag("Player") && anim.GetBool("aanvallen") == true)
         {
             Debug.Log("... Colliding ridder");
             _gameSystem.coinSystem.damage(1);
         }
-         if (other.gameObject.CompareTag("FPSsword"))
+        if (other.gameObject.CompareTag("FPSsword"))
         {
             Debug.Log("... Colliding sword");
             Destroy(gameObject, 1);
@@ -106,7 +152,7 @@ public class ridderControler : MonoBehaviour
         }
 
     }
-        
+
 
 
 
