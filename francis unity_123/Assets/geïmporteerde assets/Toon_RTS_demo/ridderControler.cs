@@ -16,6 +16,7 @@ public class ridderControler : MonoBehaviour
 
     Animator anim;
     CharacterController controller;
+    AICharacterControl aicontrol;
     NavMeshAgent nmagent;
 
     GameSystem _gameSystem = null;
@@ -27,7 +28,10 @@ public class ridderControler : MonoBehaviour
         anim = this.GetComponent<Animator>();
         controller = this.GetComponent<CharacterController>();
         nmagent = this.GetComponent<NavMeshAgent>();
-        target = ObjectToAttack.transform;
+        aicontrol = this.GetComponent<AICharacterControl>();
+
+
+       // target = ObjectToAttack.transform;
         anim.SetInteger("voorwaarde", 2);
 
         _gameSystem = GameObject.FindObjectOfType<GameSystem>();
@@ -48,6 +52,49 @@ public class ridderControler : MonoBehaviour
 
     }
 
+
+
+    /*
+     * https://docs.unity3d.com/ScriptReference/Physics.Raycast.html
+     * 
+     
+    void FixedUpdate()
+    {
+        Vector3 myPosition = transform.position;
+        Vector3 FPSposition = ObjectToAttack.transform;
+        float distance = Vector3.Distance(myPosition, FPSposition);
+
+
+
+        if (distance >= 2 && distance <= 10)
+        {
+            target = ObjectToAttack.transform;
+            nmagent.target = target;
+            //nmagent.stop;
+        }
+
+        if (distance >= 2 && distance <= 15)
+        {
+            transform.LookAt(ObjectToAttack.transform);
+            anim.SetBool("lopen", true);
+            anim.SetInteger("voorwaarde", 1);
+        }
+
+
+        
+        if (Physics.Raycast(myPosition, FPSposition.TransformDirection(Vector3.forward), out hit, Mathf.Infinity, layerMask))
+        {
+            Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.forward) * hit.distance, Color.yellow);
+            Debug.Log("Did Hit");
+        }
+        else
+        {
+            Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.forward) * 1000, Color.white);
+            Debug.Log("Did not Hit");
+        }
+
+    }*/
+
     void Animate()
     {
         Vector3 myPosition = transform.position;
@@ -56,6 +103,7 @@ public class ridderControler : MonoBehaviour
 
         if (distance >= 2 && distance <= 10)
         {
+           aicontrol.target = ObjectToAttack.transform;
             //nmagent.stop;
         }
 
