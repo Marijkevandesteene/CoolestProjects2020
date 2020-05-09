@@ -1481,6 +1481,11 @@ PrefabInstance:
       propertyPath: ObjectToAttack
       value: 
       objectReference: {fileID: 356925887}
+    - target: {fileID: 8051496354679107073, guid: fb12f7ee460d5b34c8e5e8dfe82027c3,
+        type: 3}
+      propertyPath: _attack
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8051496354679107074, guid: fb12f7ee460d5b34c8e5e8dfe82027c3,
         type: 3}
       propertyPath: target
@@ -1720,6 +1725,16 @@ PrefabInstance:
       propertyPath: ObjectToAttack
       value: 
       objectReference: {fileID: 356925887}
+    - target: {fileID: 8051496354679107073, guid: fb12f7ee460d5b34c8e5e8dfe82027c3,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8051496354679107073, guid: fb12f7ee460d5b34c8e5e8dfe82027c3,
+        type: 3}
+      propertyPath: _attack
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8051496354679107074, guid: fb12f7ee460d5b34c8e5e8dfe82027c3,
         type: 3}
       propertyPath: target
@@ -1965,6 +1980,11 @@ PrefabInstance:
       propertyPath: ObjectToAttack
       value: 
       objectReference: {fileID: 356925887}
+    - target: {fileID: 8051496354679107073, guid: fb12f7ee460d5b34c8e5e8dfe82027c3,
+        type: 3}
+      propertyPath: _attack
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8051496354679107074, guid: fb12f7ee460d5b34c8e5e8dfe82027c3,
         type: 3}
       propertyPath: target
@@ -2179,6 +2199,11 @@ PrefabInstance:
       propertyPath: ObjectToAttack
       value: 
       objectReference: {fileID: 356925887}
+    - target: {fileID: 8051496354679107073, guid: fb12f7ee460d5b34c8e5e8dfe82027c3,
+        type: 3}
+      propertyPath: _attack
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8051496354679107074, guid: fb12f7ee460d5b34c8e5e8dfe82027c3,
         type: 3}
       propertyPath: target
@@ -2842,6 +2867,11 @@ PrefabInstance:
       propertyPath: ObjectToAttack
       value: 
       objectReference: {fileID: 356925887}
+    - target: {fileID: 8051496354679107073, guid: fb12f7ee460d5b34c8e5e8dfe82027c3,
+        type: 3}
+      propertyPath: _attack
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8051496354679107074, guid: fb12f7ee460d5b34c8e5e8dfe82027c3,
         type: 3}
       propertyPath: target
@@ -3259,6 +3289,11 @@ PrefabInstance:
       propertyPath: ObjectToAttack
       value: 
       objectReference: {fileID: 356925887}
+    - target: {fileID: 8051496354679107073, guid: fb12f7ee460d5b34c8e5e8dfe82027c3,
+        type: 3}
+      propertyPath: _attack
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8051496354679107074, guid: fb12f7ee460d5b34c8e5e8dfe82027c3,
         type: 3}
       propertyPath: target
@@ -4297,6 +4332,11 @@ PrefabInstance:
       propertyPath: ObjectToAttack
       value: 
       objectReference: {fileID: 356925887}
+    - target: {fileID: 8051496354679107073, guid: fb12f7ee460d5b34c8e5e8dfe82027c3,
+        type: 3}
+      propertyPath: _attack
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8051496354679107074, guid: fb12f7ee460d5b34c8e5e8dfe82027c3,
         type: 3}
       propertyPath: target
@@ -4878,6 +4918,11 @@ PrefabInstance:
       propertyPath: ObjectToAttack
       value: 
       objectReference: {fileID: 356925887}
+    - target: {fileID: 8051496354679107073, guid: fb12f7ee460d5b34c8e5e8dfe82027c3,
+        type: 3}
+      propertyPath: _attack
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8051496354679107074, guid: fb12f7ee460d5b34c8e5e8dfe82027c3,
         type: 3}
       propertyPath: target

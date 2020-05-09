@@ -7,6 +7,7 @@ public class ridderControler : MonoBehaviour
 {
     float snelheid = 1000f;
     public GameObject ObjectToAttack;
+    public bool _attack;
     private Transform target;
 
     // Angular speed in radians per sec.
@@ -97,7 +98,7 @@ public class ridderControler : MonoBehaviour
         Vector3 FPSposition = ObjectToAttack.transform.position;
         float distance = Vector3.Distance(myPosition, FPSposition);
 
-        if (distance >= 2 && distance <= 10)
+        if (distance >= 2 && distance <= 10 && _attack == true)
         {
             //aicontrol.target = ObjectToAttack.transform;
             //this.GetComponent<AICharacterControl>().target = ObjectToAttack.transform;
@@ -105,14 +106,14 @@ public class ridderControler : MonoBehaviour
             //nmagent.stop;
         }
 
-        if (distance >= 2 && distance <= 15)
+        if (distance >= 2 && distance <= 30 && _attack == true)
         {
             transform.LookAt(ObjectToAttack.transform);
             anim.SetBool("lopen", true);
             anim.SetInteger("voorwaarde", 1);
         }
 
-        if (distance <= 2.5)
+        if (distance <= 2.5 && _attack == true)
         {
             anim.SetBool("aanvallen", true);
             anim.SetBool("lopen", false);
@@ -126,6 +127,13 @@ public class ridderControler : MonoBehaviour
                 anim.SetInteger("voorwaarde", 2);
             }
         }
+        if (_attack == false)
+        {
+            anim.SetBool("aanvallen", true);
+            anim.SetBool("lopen", false);
+            anim.SetInteger("voorwaarde", 0);
+        }
+
     }
 
     void Attacking() => StartCoroutine(AttackRoutine());

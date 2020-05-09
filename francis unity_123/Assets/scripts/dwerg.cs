@@ -24,13 +24,13 @@ public class dwerg : MonoBehaviour
         {
             showSmaragdBoodschap(false);
             showDwergBoodschap(true);
-            Invoke("disableDwergBoodschap", 20f);//invoke after 5 seconds
+            Invoke("disableDwergBoodschap", 30f);//invoke after 5 seconds
         }
         else{
             Debug.Log("....Smaragdboodschap => smaragd = ?" + this._smaragd);
             showSmaragdBoodschap(true);
             showDwergBoodschap(false);
-            Invoke("disableSmaragdBoodschap", 20f);//invoke after 5 seconds
+            Invoke("disableSmaragdBoodschap", 30f);//invoke after 5 seconds
 
         }
 

@@ -129,6 +129,11 @@ public class GameSystem : MonoBehaviour
             _coinSystem.loadGame();
             setMenuActive(false);
         }
+        if (Input.GetKeyDown(KeyCode.F10))
+        {
+           setMenuActive(!menuActive);
+        }
+
         if (Input.GetKeyDown(KeyCode.F12))
         {
             Application.Quit();
